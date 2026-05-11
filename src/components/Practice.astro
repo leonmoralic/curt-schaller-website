@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import Section from './Section.astro';
 import '../styles/components/practice.css';
 
 interface Props { lang: 'de' | 'en' }
@@ -7,40 +8,26 @@ const { lang } = Astro.props;
 const p = await getEntry('practice', lang);
 if (!p) throw new Error(`Missing practice content for ${lang}`);
 const { title, entries, email } = p.data;
-
-const wordsDe = ['null','ein','zwei','drei','vier','fünf','sechs','sieben','acht','neun'];
-const wordsEn = ['none','one','two','three','four','five','six','seven','eight','nine'];
-const word = (lang === 'de' ? wordsDe : wordsEn)[entries.length] ?? entries.length.toString();
-const noun = lang === 'de' ? 'Kapitel' : 'chapters';
-const caption = `${word} ${noun} · 01 — ${String(entries.length).padStart(2, '0')}`;
+const label = lang === 'de' ? 'Heute' : 'Today';
 ---
-<section class="practice" id="practice">
-  <div class="practice__inner container">
-    <header class="practice__head reveal">
-      <div class="practice__head-lead">
-        <span class="practice__num">03</span>
-        <h2 class="practice__title">{title}</h2>
-      </div>
-      <span class="practice__caption">{caption}</span>
-    </header>
-    <ol class="practice__list">
-      {entries.map((e, i) => (
-        <li class="practice__item reveal">
-          <a
-            class="practice__link"
-            href={`mailto:${email}?subject=${encodeURIComponent(e.mailSubject)}`}
-            aria-label={`${e.titleItalic} ${e.titleRest} — ${e.mailSubject}`}
-          >
-            <span class="practice__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-            <h3 class="practice__entry-title">
-              <em>{e.titleItalic}</em>{' '}{e.titleRest}
-            </h3>
-            <p class="practice__entry-body">{e.body}</p>
-            <span class="practice__entry-tag">{e.tag}</span>
-            <span class="practice__arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-      ))}
-    </ol>
-  </div>
-</section>
+<Section id="practice" num="03" label={label} title={title}>
+  <ol class="practice__list">
+    {entries.map((e, i) => (
+      <li class="practice__item reveal">
+        <a
+          class="practice__link"
+          href={`mailto:${email}?subject=${encodeURIComponent(e.mailSubject)}`}
+          aria-label={`${e.titleItalic} ${e.titleRest} — ${e.mailSubject}`}
+        >
+          <span class="practice__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="practice__entry-title">
+            <em>{e.titleItalic}</em>{' '}{e.titleRest}
+          </h3>
+          <p class="practice__entry-body">{e.body}</p>
+          <span class="practice__entry-tag">{e.tag}</span>
+          <span class="practice__arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</Section>
