@@ -9,6 +9,13 @@ if (!prefersReduced) {
   initReveals();
   initHeadlineSplit();
   initCounters();
+  initTimeline();
+} else {
+  // Reduced motion: ensure timeline rows are visible (CSS hides them when html.js)
+  document.querySelectorAll<HTMLElement>('.tl__row').forEach((el) => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
 }
 
 function initReveals() {
@@ -37,6 +44,19 @@ function initHeadlineSplit() {
     { y: 60, opacity: 0 },
     { y: 0, opacity: 1, duration: 1.1, ease: 'expo.out', stagger: 0.08, delay: 0.15 }
   );
+}
+
+function initTimeline() {
+  const rows = document.querySelectorAll<HTMLElement>('.tl__row');
+  if (rows.length === 0) return;
+  gsap.to(rows, {
+    y: 0,
+    opacity: 1,
+    duration: 0.85,
+    ease: 'expo.out',
+    stagger: 0.09,
+    scrollTrigger: { trigger: rows[0], start: 'top 80%', once: true },
+  });
 }
 
 function initCounters() {

@@ -2,13 +2,35 @@
 lang: en
 title: "From Bavaria Studios <em>to the Oscar.</em>"
 timeline:
-  - { year: "1964", label: "Born in Munich" }
-  - { year: "1984", label: "Camera training · Bavaria Studios" }
-  - { year: "from 1990", label: "International documentaries, TV, feature film" }
-  - { year: "2001", label: "artemis at Sachtler · NAB Las Vegas" }
-  - { year: "2015", label: "TRINITY with Dr. Roman Foltyn" }
-  - { year: "2016", label: "Joins ARRI · product manager" }
-  - { year: "2025", label: "Academy Sci-Tech Award" }
+  - year: "2025"
+    title: "<em>Academy Scientific &amp; Engineering Award</em>"
+    body: "For the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in film technology worldwide."
+    current: true
+  - year: "2017"
+    title: "BIRTV Award · Beijing"
+    body: "Honoured for the development of the TRINITY system."
+  - year: "2016"
+    title: "Joins <em>ARRI</em>"
+    body: "Product manager for camera stabilization systems. The same year: <span class=\"hl\">Cine Gear Technical Award</span> &amp; <span class=\"hl\">cinecAward</span> for TRINITY."
+  - year: "2015"
+    title: "<em>TRINITY</em> with Roman Foltyn"
+    body: "First camera stabilization system to combine mechanical and electronic stabilization in a single rig."
+  - year: "2001"
+    title: "<em>artemis</em> · Sachtler / Vitec"
+    body: "Market launch at NAB Show, Las Vegas — the world's first modular camera stabilization system. artemis-HD: first Full-HD system."
+  - year: "1998"
+    title: "Teaching · worldwide"
+    body: "Begins teaching Steadicam operators — later at Sachtler Academy, ARRI Academy, Münchner Filmwerkstatt, Gerasimov Institute Moscow."
+  - year: "1990"
+    yearSuffix: "s"
+    title: "International documentaries &amp; series"
+    body: "Studio cinematographer, then specialises in international documentaries. From the mid-90s: cinematographer and Steadicam operator on series, features, shows, and documentaries."
+  - year: "1984"
+    title: "Training · Bavaria Film"
+    body: "Camera assistant, later cinematographer at the Bavaria Film and Television Studios."
+  - year: "1964"
+    title: "Born in Munich"
+    body: "22 June · Bavaria, Germany"
 ---
 
 Curt Oswald Schaller, born on 22 June 1964 in Munich, begins his training as a camera assistant and cinematographer in 1984 at the Bavaria Film and Television Studios. In the early 1990s he specialises in international documentaries; later he works as cinematographer and Steadicam operator for TV series, feature films, shows, and documentaries.
@@ -17,4 +39,4 @@ In the late 1990s he begins to develop his own camera stabilization systems. The
 
 In April 2016 he moves the entire artemis portfolio to ARRI, where he advances its development as product manager and later brings TRINITY 2 to market. In 2025 the Academy of Motion Picture Arts and Sciences honours him with the Scientific and Engineering Award.
 
-<!-- SOURCE: Curt's Vita text, 2026-05-11 -->
+<!-- SOURCE: Curt's Vita text + timeline stations, 2026-05-11 -->

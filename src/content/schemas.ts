@@ -26,7 +26,15 @@ export const heroSchema = z.object({
 export const aboutSchema = z.object({
   lang: langPrefix,
   title: z.string(),
-  timeline: z.array(z.object({ year: z.string(), label: z.string() })),
+  timeline: z.array(
+    z.object({
+      year: z.string(),
+      yearSuffix: z.string().optional(),
+      title: z.string(),
+      body: z.string(),
+      current: z.boolean().default(false),
+    }),
+  ),
 });
 
 export const inventionsSchema = z.object({

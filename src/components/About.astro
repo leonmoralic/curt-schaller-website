@@ -12,9 +12,22 @@ const { title, timeline } = about.data;
 ---
 <Section id="about" num="01" label="Vita" title={title}>
   <div class="about__body reveal"><Content /></div>
-  <ul class="about__timeline reveal">
+
+  <ol class="tl" aria-label="Timeline">
     {timeline.map((t) => (
-      <li><span class="year">{t.year}</span><span class="label">{t.label}</span></li>
+      <li class:list={['tl__row', t.current && 'tl__row--current']}>
+        <div class="tl__year">
+          <span class="tl__year-num">{t.year}</span>
+          {t.yearSuffix && <span class="tl__year-suffix">{t.yearSuffix}</span>}
+        </div>
+        <div class="tl__rail" aria-hidden="true">
+          <span class="tl__dot" />
+        </div>
+        <div class="tl__copy">
+          <h3 class="tl__title" set:html={t.title} />
+          <p class="tl__body" set:html={t.body} />
+        </div>
+      </li>
     ))}
-  </ul>
+  </ol>
 </Section>
