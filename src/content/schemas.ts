@@ -69,7 +69,10 @@ export const practiceSchema = z.object({
 export const contactSchema = z.object({
   lang: langPrefix,
   title: z.string(),
+  letter: z.string(),
+  signature: z.string(),
   email: z.string().email(),
+  buttonLabel: z.string(),
   location: z.string(),
   links: z
     .array(z.object({ label: z.string(), href: z.string().url() }))

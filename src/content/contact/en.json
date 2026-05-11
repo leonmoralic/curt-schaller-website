@@ -1,7 +1,10 @@
 {
   "lang": "en",
-  "title": "Contact & <em>inquiries.</em>",
+  "title": "Get <em>in touch.</em>",
+  "letter": "I read every message myself. Write me anytime — workshop, R&D inquiry, talk, or just hello. I'll get back to you as soon as I can.",
+  "signature": "— Curt",
   "email": "curt@cos-cam.com",
-  "location": "Munich — Worldwide",
+  "buttonLabel": "Send a message",
+  "location": "Munich · Worldwide",
   "links": []
 }

@@ -7,14 +7,28 @@ interface Props { lang: 'de' | 'en' }
 const { lang } = Astro.props;
 const c = await getEntry('contact', lang);
 if (!c) throw new Error(`Missing contact content for ${lang}`);
-const { title, email, location, links } = c.data;
+const { title, letter, signature, email, buttonLabel, location, links } = c.data;
 ---
 <Section id="contact" num="03" label="Contact" title={title} alt>
   <div class="contact reveal">
-    <a class="contact__email" href={`mailto:${email}`}>{email}</a>
+    <p class="contact__letter">{letter}</p>
+    <p class="contact__signature">{signature}</p>
+
+    <a class="contact__cta" href={`mailto:${email}`}>
+      <span class="contact__cta-text">{buttonLabel}</span>
+      <span class="contact__cta-arrow" aria-hidden="true">→</span>
+    </a>
+
     <div class="contact__meta">
+      <a class="contact__email" href={`mailto:${email}`}>{email}</a>
+      <span class="contact__meta-sep" aria-hidden="true">·</span>
       <span>{location}</span>
-      {links.map((l) => <a href={l.href} rel="noopener noreferrer" target="_blank">{l.label}</a>)}
+      {links.map((l) => (
+        <Fragment>
+          <span class="contact__meta-sep" aria-hidden="true">·</span>
+          <a href={l.href} rel="noopener noreferrer" target="_blank">{l.label}</a>
+        </Fragment>
+      ))}
     </div>
   </div>
 </Section>

@@ -1,7 +1,10 @@
 {
   "lang": "de",
-  "title": "Kontakt & <em>Anfragen.</em>",
+  "title": "In Kontakt <em>treten.</em>",
+  "letter": "Ich lese jede Nachricht selbst. Schreib mir gerne — egal ob Workshop, R&D-Anfrage, Vortrag oder einfach ein Hallo. Ich antworte so schnell ich kann.",
+  "signature": "— Curt",
   "email": "curt@cos-cam.com",
-  "location": "München — Worldwide",
+  "buttonLabel": "Nachricht schreiben",
+  "location": "München · Worldwide",
   "links": []
 }
