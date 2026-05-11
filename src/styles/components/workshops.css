@@ -1,0 +1,16 @@
+.workshops__body { max-width: 60ch; }
+.workshops__body p { font-size: 1.0625rem; line-height: 1.65; margin-bottom: var(--space-3); color: var(--ink); opacity: 0.92; }
+.workshops__body p:last-child {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.workshops__body code {
+  font-family: var(--font-mono);
+  background: rgba(200, 165, 88, 0.08);
+  padding: 0.1em 0.4em;
+  border-radius: 2px;
+  color: var(--gold);
+}
