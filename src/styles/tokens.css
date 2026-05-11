@@ -24,6 +24,7 @@
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
+  --space-5: 2.5rem;
   --space-6: 3rem;
   --space-8: 4rem;
   --space-12: 6rem;
@@ -32,7 +33,7 @@
   /* Layout */
   --container: 1280px;
   --gutter: 1rem;
-  --pad-x-mobile: 1.5rem;
+  --pad-x-mobile: 1.75rem;
   --topbar-height: 4.5rem;
 
   /* Motion */

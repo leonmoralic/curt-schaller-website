@@ -26,8 +26,29 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  z-index: 5;
 }
 .section__num { font-size: 1.1rem; color: var(--gold); font-weight: 500; }
+
+/* Mobile: rail collapses to a horizontal pill that floats over body
+   text with a blurred backdrop, so it stays legible while scrolling. */
+@media (max-width: 899px) {
+  .section__rail {
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    gap: 0.6em;
+    padding: 0.5em 0.95em;
+    background: color-mix(in oklab, var(--bg) 78%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    /* small clearance so it doesn't kiss the topbar's bottom edge */
+    top: calc(var(--topbar-height) + var(--space-2));
+  }
+  .section__num { font-size: var(--fs-mono); }
+}
 .section__title {
   font-family: var(--font-display);
   font-style: italic;

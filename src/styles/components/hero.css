@@ -87,7 +87,7 @@
   color: var(--ink);
   opacity: 0.92;
   max-width: 46ch;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-8);
 }
 .hero__sub b { font-weight: 500; color: var(--gold); }
 
