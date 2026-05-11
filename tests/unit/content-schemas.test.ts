@@ -1,43 +1,13 @@
 import { describe, it, expect } from 'vitest';
 import {
-  filmographySchema,
-  awardsSchema,
   inventionsSchema,
   heroSchema,
   contactSchema,
+  practiceSchema,
+  aboutSchema,
 } from '../../src/content/schemas';
 
 describe('content schemas', () => {
-  it('accepts a valid filmography entry', () => {
-    const parsed = filmographySchema.parse({
-      lang: 'de',
-      title: 'Filmografie',
-      entries: [
-        { year: 2024, title: 'Dune: Part Two', director: 'Denis Villeneuve', role: 'Consultant' },
-      ],
-    });
-    expect(parsed.entries[0].title).toBe('Dune: Part Two');
-  });
-
-  it('rejects filmography with invalid role', () => {
-    expect(() =>
-      filmographySchema.parse({
-        lang: 'de',
-        title: 'Filmografie',
-        entries: [{ year: 2024, title: 'X', director: 'Y', role: 'Director' }],
-      }),
-    ).toThrow();
-  });
-
-  it('accepts a valid award entry', () => {
-    const parsed = awardsSchema.parse({
-      lang: 'en',
-      title: 'Awards',
-      entries: [{ year: 2025, title: 'Academy Sci-Tech Award', body: 'For TRINITY 2.' }],
-    });
-    expect(parsed.entries[0].year).toBe(2025);
-  });
-
   it('accepts an invention with patents array', () => {
     const parsed = inventionsSchema.parse({
       lang: 'de',
@@ -80,5 +50,48 @@ describe('content schemas', () => {
     });
     expect(parsed.headlineLines[0].emphasis).toBe(false);
     expect(parsed.stats[0].count).toBe(30);
+  });
+
+  it('accepts a practice entry with mailSubject', () => {
+    const parsed = practiceSchema.parse({
+      lang: 'de',
+      title: 'Practice.',
+      email: 'curt@cos-cam.com',
+      entries: [
+        {
+          titleItalic: 'Workshops',
+          titleRest: '& Trainings',
+          body: 'Intensive Trainings.',
+          tag: 'München · DACH',
+          mailSubject: 'Anfrage: Workshop',
+        },
+      ],
+    });
+    expect(parsed.entries[0].titleItalic).toBe('Workshops');
+    expect(parsed.email).toBe('curt@cos-cam.com');
+  });
+
+  it('rejects practice with invalid email', () => {
+    expect(() =>
+      practiceSchema.parse({
+        lang: 'de',
+        title: 'Practice.',
+        email: 'not-an-email',
+        entries: [],
+      }),
+    ).toThrow();
+  });
+
+  it('accepts about timeline with current flag', () => {
+    const parsed = aboutSchema.parse({
+      lang: 'de',
+      title: 'Vita',
+      timeline: [
+        { year: '2025', title: 'Oscar', body: 'Sci-Tech', current: true },
+        { year: '1984', title: 'Bavaria', body: 'Training' },
+      ],
+    });
+    expect(parsed.timeline[0].current).toBe(true);
+    expect(parsed.timeline[1].current).toBe(false);
   });
 });

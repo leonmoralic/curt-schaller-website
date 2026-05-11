@@ -51,36 +51,19 @@ export const inventionsSchema = z.object({
   ),
 });
 
-export const awardsSchema = z.object({
+export const practiceSchema = z.object({
   lang: langPrefix,
   title: z.string(),
   entries: z.array(
     z.object({
-      year: z.number(),
-      title: z.string(),
+      titleItalic: z.string(),
+      titleRest: z.string(),
       body: z.string(),
-      source: z.string().optional(),
+      tag: z.string(),
+      mailSubject: z.string(),
     }),
   ),
-});
-
-export const filmographySchema = z.object({
-  lang: langPrefix,
-  title: z.string(),
-  entries: z.array(
-    z.object({
-      year: z.number(),
-      title: z.string(),
-      director: z.string(),
-      role: z.enum(['Operator', 'Consultant', 'DOP', 'Other']),
-      note: z.string().optional(),
-    }),
-  ),
-});
-
-export const workshopsSchema = z.object({
-  lang: langPrefix,
-  title: z.string(),
+  email: z.string().email(),
 });
 
 export const contactSchema = z.object({

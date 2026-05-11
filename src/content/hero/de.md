@@ -6,13 +6,12 @@ headlineLines:
   - { text: "behind", emphasis: true }
   - { text: "the motion.", emphasis: false }
 stats:
-  - { label: "Jahre am Set", value: "40+", count: 40, suffix: "+" }
-  - { label: "München", value: "1964" }
+  - { label: "Jahre im Fach", value: "40+", count: 40, suffix: "+" }
   - { label: "Oscar · Sci-Tech", value: "2025" }
 image: /images/curt-master.png
 imageAlt: Curt O. Schaller mit dem Academy Scientific and Engineering Award 2025
 ---
 
-**Curt O. Schaller** (*&nbsp;1964, München) ist Kameramann, Steadicam&nbsp;Operator und Entwickler der ARRI-Kamerastabilisierungs-Systeme. 2025 wurde er für Konzept, Design und Entwicklung des TRINITY&nbsp;2 mit dem Academy Scientific and Engineering Award ausgezeichnet.
+**Curt O. Schaller** ist Kameramann und Entwickler der ARRI-Kamerastabilisierungs-Systeme. 2025 wurde er gemeinsam mit Dr.&nbsp;Roman&nbsp;Foltyn für Konzept, Design und Entwicklung des TRINITY&nbsp;2 mit dem Academy Scientific and Engineering Award ausgezeichnet.
 
-<!-- SOURCE: vorlage hero, AMPAS Sci-Tech Citation 2025 -->
+<!-- SOURCE: Curt's Vita-Text, 2026-05-11; Foltyn Co-Recipient bestätigt -->

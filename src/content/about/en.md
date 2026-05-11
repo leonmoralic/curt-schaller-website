@@ -4,7 +4,7 @@ title: "From Bavaria Studios <em>to the Oscar.</em>"
 timeline:
   - year: "2025"
     title: "<em>Academy Scientific &amp; Engineering Award</em>"
-    body: "For the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in film technology worldwide."
+    body: "Awarded together with <span class=\"hl\">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in film technology worldwide."
     current: true
   - year: "2017"
     title: "BIRTV Award · Beijing"
@@ -28,9 +28,6 @@ timeline:
   - year: "1984"
     title: "Training · Bavaria Film"
     body: "Camera assistant, later cinematographer at the Bavaria Film and Television Studios."
-  - year: "1964"
-    title: "Born in Munich"
-    body: "22 June · Bavaria, Germany"
 ---
 
 Curt Oswald Schaller, born on 22 June 1964 in Munich, begins his training as a camera assistant and cinematographer in 1984 at the Bavaria Film and Television Studios. In the early 1990s he specialises in international documentaries; later he works as cinematographer and Steadicam operator for TV series, feature films, shows, and documentaries.

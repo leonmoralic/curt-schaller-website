@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const SECTIONS = ['hero', 'about', 'inventions', 'awards', 'filmography', 'workshops', 'contact'];
+const SECTIONS = ['hero', 'about', 'inventions', 'practice', 'contact'];
 
 for (const lang of ['de', 'en'] as const) {
   test(`${lang}: all sections render`, async ({ page }) => {
@@ -13,8 +13,16 @@ for (const lang of ['de', 'en'] as const) {
 
   test(`${lang}: mailto link present`, async ({ page }) => {
     await page.goto(`/${lang}/`);
-    const mailto = page.locator('a[href^="mailto:curt@"]');
+    const mailto = page.locator('a[href^="mailto:curt@"]').first();
     await expect(mailto).toBeVisible();
+  });
+
+  test(`${lang}: practice cards link to mailto with prefilled subject`, async ({ page }) => {
+    await page.goto(`/${lang}/`);
+    const cards = page.locator('.practice__link');
+    await expect(cards).toHaveCount(3);
+    const firstHref = await cards.first().getAttribute('href');
+    expect(firstHref).toMatch(/^mailto:curt@cos-cam\.com\?subject=/);
   });
 }
 

@@ -1,0 +1,28 @@
+{
+  "lang": "en",
+  "title": "Practice.",
+  "entries": [
+    {
+      "titleItalic": "Workshops",
+      "titleRest": "& Trainings",
+      "body": "Intensive trainings for operators and crews. From first set-up to your own signature in motion.",
+      "tag": "Munich · DACH",
+      "mailSubject": "Inquiry: Workshop"
+    },
+    {
+      "titleItalic": "R&D",
+      "titleRest": "Consulting",
+      "body": "Engineering consultation for manufacturers, studios, and research labs — mechanical, sensoric, mechatronic.",
+      "tag": "NDA · Worldwide",
+      "mailSubject": "Inquiry: R&D Consulting"
+    },
+    {
+      "titleItalic": "Talks",
+      "titleRest": "& Lectures",
+      "body": "Talks on invention, filmcraft, and the bridge between human and machine — festivals and film schools.",
+      "tag": "Keynotes",
+      "mailSubject": "Inquiry: Talk"
+    }
+  ],
+  "email": "curt@cos-cam.com"
+}
