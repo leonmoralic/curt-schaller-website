@@ -1,0 +1,29 @@
+.films { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.film {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 120px;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.film:hover { background: rgba(200, 165, 88, 0.04); }
+.film__year { color: var(--gold); }
+.film__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+.film__director { color: var(--ink); opacity: 0.7; }
+.film__role { color: var(--gold-2); text-align: right; }
+@media (max-width: 760px) {
+  .film { grid-template-columns: 60px 1fr; }
+  .film__director, .film__role { grid-column: 2; }
+}
