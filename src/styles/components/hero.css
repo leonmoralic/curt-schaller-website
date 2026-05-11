@@ -1,13 +1,38 @@
-/* Hero is full-width so the bottom fade extends edge-to-edge of the
-   viewport — no visible seam between the container and the page bg. */
+/* Hero is full-width so the spotlight + bottom fade extend edge-to-edge
+   of the viewport — no visible seam between the container and the
+   page bg. */
 .hero {
   position: relative;
   overflow: hidden;
+  --mx: 50%;
+  --my: 30%;
+}
+
+/* Cursor-following warm spotlight.
+   Uses an explicit pixel radius and a multi-stop alpha fade so the
+   gradient dissolves into the bg without showing a hard "transparent"
+   boundary at the stop position. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    680px circle at var(--mx) var(--my),
+    rgba(200, 165, 88, 0.10) 0%,
+    rgba(200, 165, 88, 0.055) 25%,
+    rgba(200, 165, 88, 0.02) 55%,
+    rgba(200, 165, 88, 0.005) 80%,
+    transparent 100%
+  );
+  z-index: 0;
+  transition: opacity var(--dur-fast) var(--ease-out);
 }
 
 /* Inner wrapper carries the grid + max-width */
 .hero__inner {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
