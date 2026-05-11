@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/components/legal.css';
+---
+<BaseLayout lang="de" title="Impressum — Curt O. Schaller" description="Impressum / Imprint">
+  <main class="legal">
+    <h1>Impressum</h1>
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      Curt O. Schaller<br>
+      [Straße + Hausnummer]<br>
+      [PLZ Ort]<br>
+      Deutschland
+    </p>
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:curt@cos-cam.com">curt@cos-cam.com</a></p>
+    <h2>Verantwortlich für den Inhalt</h2>
+    <p>Curt O. Schaller (Anschrift wie oben)</p>
+    <h2>Haftungsausschluss</h2>
+    <p>Inhalte dieser Seite wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden.</p>
+  </main>
+  <Footer lang="de" />
+</BaseLayout>

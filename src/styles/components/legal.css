@@ -1,0 +1,23 @@
+.legal {
+  max-width: 70ch;
+  padding: var(--space-12) var(--pad-x-mobile);
+  margin: 0 auto;
+}
+.legal h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--fs-section);
+  margin-bottom: var(--space-4);
+  color: var(--ink);
+}
+.legal h2 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: var(--space-4) 0 var(--space-2);
+}
+.legal p { margin-bottom: var(--space-3); line-height: 1.6; color: var(--ink); opacity: 0.9; }
+.legal a { color: var(--gold); border-bottom: 1px solid var(--rule); }
