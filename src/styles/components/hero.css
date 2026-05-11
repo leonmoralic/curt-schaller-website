@@ -181,6 +181,11 @@
 }
 
 @media (max-width: 899px) {
+  .hero__inner {
+    /* extra horizontal room for the big italic Fraunces */
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
   .hero__img {
     min-height: 260px;
     padding: var(--space-2) 0 0;
