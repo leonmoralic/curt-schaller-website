@@ -1,0 +1,19 @@
+{
+  "lang": "en",
+  "title": "Inventions & <em>development.</em>",
+  "entries": [
+    {
+      "name": "TRINITY 1",
+      "year": 2014,
+      "principle": "The first hybrid system combining active gimbal stabilization with classical Steadicam mechanics. Enables continuous camera movement from any position — floor to overhead — without setup changes.",
+      "patents": []
+    },
+    {
+      "name": "TRINITY 2",
+      "year": 2024,
+      "principle": "Next-generation successor with reduced weight, expanded stabilization modes, and refined operating logic. Concept, design, and development by Curt O. Schaller in cooperation with ARRI.",
+      "patents": [],
+      "award": "Academy Scientific and Engineering Award 2025"
+    }
+  ]
+}

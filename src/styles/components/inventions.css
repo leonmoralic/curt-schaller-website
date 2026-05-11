@@ -1,0 +1,46 @@
+.inventions { display: grid; gap: var(--space-6); }
+.invention {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+}
+.invention__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+.invention__name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.invention__year {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+.invention__principle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  color: var(--ink);
+  opacity: 0.92;
+}
+.invention__award {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+.invention__award::before { content: "★"; }

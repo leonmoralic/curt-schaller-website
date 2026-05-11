@@ -1,0 +1,25 @@
+---
+import { getEntry } from 'astro:content';
+import Section from './Section.astro';
+import '../styles/components/inventions.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const inv = await getEntry('inventions', lang);
+if (!inv) throw new Error(`Missing inventions content for ${lang}`);
+const { title, entries } = inv.data;
+---
+<Section id="inventions" num="02" label="Inventions" title={title} alt>
+  <div class="inventions">
+    {entries.map((e) => (
+      <article class="invention reveal">
+        <header class="invention__head">
+          <h3 class="invention__name">{e.name}</h3>
+          <span class="invention__year">{e.year}</span>
+        </header>
+        <p class="invention__principle">{e.principle}</p>
+        {e.award && <span class="invention__award">{e.award}</span>}
+      </article>
+    ))}
+  </div>
+</Section>
