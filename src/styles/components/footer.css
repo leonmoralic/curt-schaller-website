@@ -5,9 +5,9 @@
   font-size: var(--fs-caption);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--mute);
+  color: var(--gold-2);
 }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3); }
 .footer__links { display: flex; gap: var(--space-3); }
-.footer__links a { color: var(--mute); }
+.footer__links a { color: var(--gold-2); }
 .footer__links a:hover { color: var(--ink); }
