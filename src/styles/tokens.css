@@ -1,0 +1,42 @@
+:root {
+  /* Color */
+  --bg: #0a0907;
+  --bg-2: #13110d;
+  --gold: #c8a558;
+  --gold-2: #8a7f6c;
+  --ink: #e8e3d6;
+  --mute: #5e574a;
+  --rule: rgba(200, 165, 88, 0.18);
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale */
+  --fs-hero: clamp(3rem, 8vw, 6rem);
+  --fs-section: clamp(1.75rem, 4vw, 3rem);
+  --fs-body: 1.0625rem;
+  --fs-mono: 0.8125rem;
+  --fs-caption: 0.6875rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: 1rem;
+  --pad-x-mobile: 1.5rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 200ms;
+  --dur-med: 600ms;
+  --dur-slow: 1200ms;
+}
