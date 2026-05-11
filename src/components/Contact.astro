@@ -1,0 +1,20 @@
+---
+import { getEntry } from 'astro:content';
+import Section from './Section.astro';
+import '../styles/components/contact.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const c = await getEntry('contact', lang);
+if (!c) throw new Error(`Missing contact content for ${lang}`);
+const { title, email, location, links } = c.data;
+---
+<Section id="contact" num="06" label="Contact" title={title} alt>
+  <div class="contact reveal">
+    <a class="contact__email" href={`mailto:${email}`}>{email}</a>
+    <div class="contact__meta">
+      <span>{location}</span>
+      {links.map((l) => <a href={l.href} rel="noopener noreferrer" target="_blank">{l.label}</a>)}
+    </div>
+  </div>
+</Section>
