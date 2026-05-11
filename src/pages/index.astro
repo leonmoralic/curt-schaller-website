@@ -1,6 +1,5 @@
 ---
+const accept = Astro.request.headers.get('accept-language') || '';
+const prefersEn = /^en/i.test(accept) && !/^de/i.test(accept);
+return Astro.redirect(prefersEn ? '/en/' : '/de/');
 ---
-<html lang="de">
-  <head><meta charset="utf-8"><title>Curt O. Schaller</title></head>
-  <body><p>Scaffold OK</p></body>
-</html>
