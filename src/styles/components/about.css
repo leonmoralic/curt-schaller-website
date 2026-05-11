@@ -14,11 +14,69 @@
 /* ============== Timeline ============== */
 
 .tl {
+  position: relative;
   list-style: none;
   margin: var(--space-8) 0 0;
   padding: 0;
   display: grid;
   gap: 0;
+  /* horizontal position of the rail's center, used by .tl__fill + .tl__playhead.
+     Matches: 140px year-col + 24px gap + 18px (half of 36px rail-col). */
+  --rail-x: 182px;
+}
+@media (max-width: 720px) {
+  .tl { --rail-x: 14px; }
+}
+
+/* ---- Steadicam-style scrub playhead ---- */
+
+.tl__fill {
+  position: absolute;
+  left: var(--rail-x);
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(200, 165, 88, 0.55) 8%,
+    var(--gold) 28%,
+    var(--gold) 80%,
+    rgba(200, 165, 88, 0.6) 100%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(200, 165, 88, 0.45);
+}
+
+.tl__playhead {
+  position: absolute;
+  left: var(--rail-x);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 0 0 1px rgba(200, 165, 88, 0.4),
+    0 0 16px rgba(200, 165, 88, 0.7),
+    0 0 36px rgba(200, 165, 88, 0.32);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-out);
+}
+.tl__playhead--active { opacity: 1; }
+
+/* Year animates in subtly when the playhead reaches it */
+.tl__row .tl__year { transition: color 0.4s var(--ease-out); }
+.tl__row--passed .tl__year { color: var(--gold); }
+.tl__row--current .tl__year { color: var(--gold); }
+
+/* Dot transitions to filled when the playhead has passed it */
+.tl__dot { transition: background var(--dur-fast) var(--ease-out),
+                       border-color var(--dur-fast) var(--ease-out),
+                       box-shadow var(--dur-fast) var(--ease-out); }
+.tl__row--passed:not(.tl__row--current) .tl__dot {
+  background: var(--gold);
+  border-color: var(--gold);
 }
 
 .tl__row {
