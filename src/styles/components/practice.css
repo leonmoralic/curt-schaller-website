@@ -14,6 +14,19 @@
   border-bottom: 1px solid var(--rule);
   margin-bottom: 0;
 }
+.practice__head-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: flex-start;
+}
+.practice__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  font-weight: 500;
+}
 .practice__title {
   font-family: var(--font-display);
   font-style: italic;
