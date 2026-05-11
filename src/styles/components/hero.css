@@ -1,25 +1,13 @@
-/* Hero is full-width so the radial halo and the bottom fade
-   extend edge-to-edge of the viewport — no visible seam between the
-   container and the page background. */
+/* Hero is full-width so the bottom fade extends edge-to-edge of the
+   viewport — no visible seam between the container and the page bg. */
 .hero {
   position: relative;
   overflow: hidden;
-  --mx: 50%;
-  --my: 30%;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at var(--mx) var(--my), rgba(200, 165, 88, 0.08), transparent 50%);
-  z-index: 0;
 }
 
 /* Inner wrapper carries the grid + max-width */
 .hero__inner {
   position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
