@@ -1,0 +1,21 @@
+.about__body { display: flex; flex-direction: column; gap: var(--space-4); max-width: 64ch; }
+.about__body p { font-size: 1.0625rem; line-height: 1.65; color: var(--ink); opacity: 0.92; }
+.about__timeline {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+}
+.about__timeline li {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.about__timeline .year { color: var(--gold); }
+.about__timeline .label { color: var(--ink); opacity: 0.85; }

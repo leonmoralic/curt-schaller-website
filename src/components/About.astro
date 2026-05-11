@@ -1,0 +1,20 @@
+---
+import { getEntry } from 'astro:content';
+import Section from './Section.astro';
+import '../styles/components/about.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const about = await getEntry('about', lang);
+if (!about) throw new Error(`Missing about content for ${lang}`);
+const { Content } = await about.render();
+const { title, timeline } = about.data;
+---
+<Section id="about" num="01" label="About" title={title}>
+  <div class="about__body reveal"><Content /></div>
+  <ul class="about__timeline reveal">
+    {timeline.map((t) => (
+      <li><span class="year">{t.year}</span><span class="label">{t.label}</span></li>
+    ))}
+  </ul>
+</Section>
