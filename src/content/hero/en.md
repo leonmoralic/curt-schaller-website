@@ -6,7 +6,7 @@ headlineLines:
   - { text: "behind", emphasis: true }
   - { text: "the motion.", emphasis: false }
 stats:
-  - { label: "Years on set", value: "30+", count: 30, suffix: "+" }
+  - { label: "Years on set", value: "40+", count: 40, suffix: "+" }
   - { label: "Munich", value: "1964" }
   - { label: "Oscar · Sci-Tech", value: "2025" }
 image: /images/curt-hero.jpg

@@ -1,18 +1,20 @@
 ---
 lang: de
-title: "Eine Karriere <em>in Bewegung.</em>"
+title: "Vom Bavaria-Studio <em>zum Oscar.</em>"
 timeline:
   - { year: "1964", label: "Geboren in München" }
-  - { year: "ab 1990", label: "Steadicam Operator, internationale Produktionen" }
-  - { year: "2014", label: "TRINITY 1 — Konzept & Entwicklung mit ARRI" }
-  - { year: "2024", label: "TRINITY 2 — Markteinführung" }
+  - { year: "1984", label: "Ausbildung Kameramann · Bavaria Studios" }
+  - { year: "ab 1990", label: "Auslandsdokumentationen, TV, Spielfilm" }
+  - { year: "2001", label: "artemis bei Sachtler · NAB Las Vegas" }
+  - { year: "2015", label: "TRINITY mit Dr. Roman Foltyn" }
+  - { year: "2016", label: "Wechsel zu ARRI · Produktmanager" }
   - { year: "2025", label: "Academy Sci-Tech Award" }
 ---
 
-Curt O. Schaller arbeitet seit über drei Jahrzehnten als Steadicam-Operator auf internationalen Produktionen. Sein technisches Interesse an der Mechanik der Kamerabewegung führte zur Entwicklung neuer Stabilisierungssysteme — zunächst als Modifikationen am Set, später in enger Zusammenarbeit mit ARRI als marktreife Produkte.
+Curt Oswald Schaller, geboren am 22. Juni 1964 in München, beginnt 1984 seine Ausbildung zum Kameraassistenten und Kameramann in den Bavaria-Film- und Fernsehstudios. Anfang der 1990er Jahre spezialisiert er sich auf Auslandsdokumentationen, später arbeitet er als Kameramann und Steadicam Operator für TV-Serien, Spielfilme, Shows und Dokumentationen.
 
-Das TRINITY-System verbindet aktive Gimbal-Stabilisierung mit klassischer Steadicam-Mechanik und erlaubt Bewegungen, die zuvor nur mit deutlich aufwendigeren Setups möglich waren. Mit TRINITY 2 — dem 2024 vorgestellten Nachfolger — wurde der Funktionsumfang erweitert und das Gewicht reduziert.
+Ende der 1990er Jahre beginnt er, eigene Kamerastabilisierungssysteme zu entwickeln. Daraus geht 2001 bei Sachtler die artemis-Reihe hervor — das weltweit erste modular aufgebaute Kamerastabilisierungssystem, vorgestellt auf der NAB Show in Las Vegas. 2015 entwickelt er gemeinsam mit Dr. Roman Foltyn das TRINITY-System, das erstmals mechanische und elektronische Stabilisierung in einem Rig vereint.
 
-2025 erhielt Schaller für Konzept, Design und Entwicklung des TRINITY 2 den Academy Scientific and Engineering Award. Er lebt in München und arbeitet weltweit.
+Im April 2016 wechselt er mit dem gesamten artemis-Portfolio zu ARRI, treibt dort als Produktmanager die Weiterentwicklung voran und bringt später das TRINITY 2 auf den Markt. 2025 zeichnet ihn die Academy of Motion Picture Arts and Sciences dafür mit dem Scientific and Engineering Award aus.
 
-<!-- SOURCE: ARRI press releases TRINITY 1 (2014) and TRINITY 2 (2024); AMPAS citation 2025. VERIFY: with Curt before launch. -->
+<!-- SOURCE: Vita-Text von Curt, 2026-05-11 -->

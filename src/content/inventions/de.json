@@ -3,15 +3,21 @@
   "title": "Erfindungen & <em>Entwicklung.</em>",
   "entries": [
     {
-      "name": "TRINITY 1",
-      "year": 2014,
-      "principle": "Erstes Hybrid-System aus aktiver Gimbal-Stabilisierung und klassischer Steadicam-Mechanik. Ermöglicht stufenlos Bewegungen aus jeder Kameraposition — vom Boden bis über Kopf — ohne Setupwechsel.",
+      "name": "artemis",
+      "year": 2001,
+      "principle": "Bei Sachtler entwickelt — das weltweit erste modular aufgebaute Kamerastabilisierungssystem. Vorgestellt auf der NAB Show in Las Vegas. Ein Baukasten-Konzept, das Operator unterschiedliche Kamerakonfigurationen aus einem gemeinsamen System zusammenstellen lässt.",
+      "patents": []
+    },
+    {
+      "name": "TRINITY",
+      "year": 2015,
+      "principle": "Gemeinsam mit Dr. Roman Foltyn entwickelt. Erstes Hybrid-System, das mechanische Steadicam-Stabilisierung und elektronische Gimbal-Stabilisierung in einem einzigen Rig vereint. Ermöglicht stufenlos Bewegungen aus jeder Kameraposition — vom Boden bis über Kopf — ohne Setupwechsel.",
       "patents": []
     },
     {
       "name": "TRINITY 2",
       "year": 2024,
-      "principle": "Nachfolger-Generation mit reduziertem Gewicht, erweiterten Stabilisierungs-Modi und überarbeiteter Bedienlogik. Konzept, Design und Entwicklung von Curt O. Schaller in Zusammenarbeit mit ARRI.",
+      "principle": "Nachfolger-Generation bei ARRI. Reduziertes Gewicht, erweiterte Stabilisierungs-Modi, überarbeitete Bedienlogik. Konzept, Design und Entwicklung von Curt O. Schaller.",
       "patents": [],
       "award": "Academy Scientific and Engineering Award 2025"
     }

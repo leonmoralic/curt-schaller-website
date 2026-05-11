@@ -10,7 +10,7 @@ if (!about) throw new Error(`Missing about content for ${lang}`);
 const { Content } = await about.render();
 const { title, timeline } = about.data;
 ---
-<Section id="about" num="01" label="About" title={title}>
+<Section id="about" num="01" label="Vita" title={title}>
   <div class="about__body reveal"><Content /></div>
   <ul class="about__timeline reveal">
     {timeline.map((t) => (
