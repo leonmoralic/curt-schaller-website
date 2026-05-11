@@ -2,15 +2,23 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-3) var(--pad-x-mobile);
   background: color-mix(in oklab, var(--bg) 88%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
 }
+
+/* Inner row sits on the same container axis as the hero content,
+   so the wordmark's left edge and the toggle's right edge align
+   with the hero headline + image edges. */
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
 .topbar__mark {
   display: inline-flex;
   align-items: baseline;
