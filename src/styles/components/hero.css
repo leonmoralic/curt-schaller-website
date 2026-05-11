@@ -97,17 +97,17 @@
   margin: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: center;
   min-height: 360px;
 }
 
 /* Gold radial halo behind the figure */
 .hero__img-glow {
   position: absolute;
-  /* anchored to where Curt's torso/face sits in the image */
-  right: 8%;
-  bottom: 6%;
-  width: 70%;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  width: 78%;
   aspect-ratio: 1 / 1;
   background: radial-gradient(circle at center,
     rgba(200, 165, 88, 0.28) 0%,
@@ -123,13 +123,13 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  max-width: none;
   filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.55))
           drop-shadow(0 0 24px rgba(200, 165, 88, 0.08));
 }
 
-/* Soft fade-in vignette at the bottom so the figure
+/* Soft fade at the bottom so the figure
    doesn't get harshly cut by the section break */
 .hero__img::after {
   content: "";
@@ -142,26 +142,14 @@
 }
 
 @media (min-width: 900px) {
-  .hero__img {
-    /* let the figure bleed slightly past the container edge */
-    margin-right: calc(-1 * var(--pad-x-mobile));
-    align-self: stretch;
-  }
+  .hero__img { align-self: stretch; }
   .hero__img img {
-    width: 115%;
-    max-width: 115%;
-    margin-right: -8%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero__img img {
-    width: 120%;
-    margin-right: -10%;
+    /* contained — never cropped on the right */
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 899px) {
   .hero__img { min-height: 280px; padding: var(--space-2) 0 0; }
-  .hero__img img { width: 100%; }
 }

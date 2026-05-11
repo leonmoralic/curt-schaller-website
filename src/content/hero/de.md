@@ -9,7 +9,7 @@ stats:
   - { label: "Jahre am Set", value: "40+", count: 40, suffix: "+" }
   - { label: "München", value: "1964" }
   - { label: "Oscar · Sci-Tech", value: "2025" }
-image: /images/curt-oscars.png
+image: /images/curt-master.png
 imageAlt: Curt O. Schaller mit dem Academy Scientific and Engineering Award 2025
 ---
 
