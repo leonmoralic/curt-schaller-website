@@ -1,0 +1,24 @@
+# Apache config for Hostinger. Static Astro site, locale-prefixed routes.
+
+# Sensible defaults for cache + compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 365 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+
+# Pretty URLs: serve /de/index.html when /de/ is requested (Apache does this
+# automatically for DirectoryIndex, but explicit doesn't hurt).
+DirectoryIndex index.html
+
+# 404 fallback to the localized 404 if you ever add one; for now the default
+# Hostinger 404 is fine.

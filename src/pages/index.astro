@@ -1,5 +1,39 @@
 ---
-const accept = Astro.request.headers.get('accept-language') || '';
-const prefersEn = /^en/i.test(accept) && !/^de/i.test(accept);
-return Astro.redirect(prefersEn ? '/en/' : '/de/');
+// Static-build language router. Picks the target locale via:
+//   1) localStorage('cos.lang') if set (returning visitor)
+//   2) navigator.language otherwise
+//   3) /de/ as the absolute fallback
+// Falls back to a 0s meta refresh + a plain anchor for no-JS clients.
 ---
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=/de/" />
+  <link rel="canonical" href="https://cos-cam.com/de/" />
+  <link rel="alternate" hreflang="de" href="https://cos-cam.com/de/" />
+  <link rel="alternate" hreflang="en" href="https://cos-cam.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://cos-cam.com/de/" />
+  <meta name="robots" content="noindex" />
+  <title>Curt O. Schaller</title>
+  <script>
+    (function () {
+      try {
+        var saved = null;
+        try { saved = localStorage.getItem('cos.lang'); } catch (e) {}
+        var lang = saved === 'en' || saved === 'de'
+          ? saved
+          : (((navigator.language || navigator.userLanguage || 'de').toLowerCase().indexOf('en') === 0) ? 'en' : 'de');
+        window.location.replace('/' + lang + '/');
+      } catch (e) {
+        window.location.replace('/de/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a href="/de/">Curt O. Schaller — Deutsch</a>
+  &nbsp;·&nbsp;
+  <a href="/en/">English</a>
+</body>
+</html>
