@@ -1,6 +1,6 @@
 ---
 lang: en
-kicker: Academy Award — Sci-Tech 2025
+kicker: Cinematographer · Inventor · Mentor
 headlineLines:
   - { text: "The mind", emphasis: false }
   - { text: "behind", emphasis: true }
