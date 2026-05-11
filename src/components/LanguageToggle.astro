@@ -1,0 +1,18 @@
+---
+import '../styles/components/language-toggle.css';
+
+interface Props { current: 'de' | 'en' }
+const { current } = Astro.props;
+const path = Astro.url.pathname;
+const stripped = path.replace(/^\/(de|en)/, '') || '/';
+const dePath = `/de${stripped === '/' ? '' : stripped}`;
+const enPath = `/en${stripped === '/' ? '' : stripped}`;
+---
+<nav class="lang-toggle" aria-label="Language">
+  <a href={dePath} class={current === 'de' ? 'active' : ''} data-lang="de" data-preserve-hash>DE</a>
+  <span class="lang-toggle__sep">·</span>
+  <a href={enPath} class={current === 'en' ? 'active' : ''} data-lang="en" data-preserve-hash>EN</a>
+</nav>
+<script>
+  import '../scripts/languageToggle.ts';
+</script>

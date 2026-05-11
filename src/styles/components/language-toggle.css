@@ -1,0 +1,19 @@
+.lang-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.lang-toggle a {
+  color: var(--mute);
+  padding: 0.25em 0.5em;
+  border-radius: 2px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.lang-toggle a:hover { color: var(--ink); }
+.lang-toggle a.active { color: var(--gold); font-weight: 500; }
+.lang-toggle__sep { color: var(--rule); }
