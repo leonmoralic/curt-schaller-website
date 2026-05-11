@@ -34,19 +34,20 @@ jobs:
         run: pnpm build
         # outputs dist/ — that's the whole static site
 
-      - name: Deploy to Hostinger via FTPS
+      - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          # Hostinger's shared hosting answers FTPS-explicit on port 21.
-          # TLS handshake can be slow from the GitHub runner — give it room.
-          protocol: ftps
+          # Hostinger's FTPS TLS handshake times out from GitHub runners
+          # on the standard shared-hosting tier. Plain FTP works and is
+          # acceptable here: only static HTML/CSS/JS travels in the clear,
+          # the credentials stay in GitHub Secrets.
+          protocol: ftp
           port: 21
           timeout: 60000
           local-dir: ./dist/
           server-dir: ${{ secrets.HOSTINGER_FTP_SERVER_DIR || '/public_html/' }}
-          # log-level verbose so we get a useful trace if the connect fails
           log-level: verbose
           dangerous-clean-slate: false
