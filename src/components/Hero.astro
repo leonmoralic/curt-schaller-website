@@ -12,7 +12,7 @@ const { kicker, headlineLines, stats, image, imageAlt } = hero.data;
 <section class="hero" id="hero">
   <div class="hero__inner container">
     <div class="hero__copy">
-      <div class="hero__kicker reveal d1"><span class="star">★</span>{kicker}</div>
+      <div class="hero__kicker reveal d1">{kicker}</div>
       <h1 class="hero__title reveal d2" data-split>
         {headlineLines.map((line) => (
           <span class="line">{line.emphasis ? <em>{line.text}</em> : line.text}</span>
