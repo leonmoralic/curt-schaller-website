@@ -40,11 +40,13 @@ jobs:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          # Hostinger's shared hosting answers FTPS-explicit on port 21.
+          # TLS handshake can be slow from the GitHub runner — give it room.
           protocol: ftps
           port: 21
+          timeout: 60000
           local-dir: ./dist/
           server-dir: ${{ secrets.HOSTINGER_FTP_SERVER_DIR || '/public_html/' }}
-          # incremental: only changed files re-upload, much faster after the first deploy
-          # log-level uses verbose only on dispatch for debugging
-          log-level: standard
+          # log-level verbose so we get a useful trace if the connect fails
+          log-level: verbose
           dangerous-clean-slate: false

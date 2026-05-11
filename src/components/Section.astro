@@ -5,7 +5,7 @@ interface Props {
   id: string;
   num: string;
   label: string;
-  title: string;
+  title?: string;
   alt?: boolean;
 }
 const { id, num, label, title, alt = false } = Astro.props;
@@ -17,7 +17,7 @@ const { id, num, label, title, alt = false } = Astro.props;
       <span>{label}</span>
     </aside>
     <div class="section__body">
-      <h2 class="section__title reveal" set:html={title} />
+      {title && <h2 class="section__title reveal" set:html={title} />}
       <slot />
     </div>
   </div>

@@ -7,10 +7,10 @@ interface Props { lang: 'de' | 'en' }
 const { lang } = Astro.props;
 const p = await getEntry('practice', lang);
 if (!p) throw new Error(`Missing practice content for ${lang}`);
-const { title, entries, email } = p.data;
+const { entries, email } = p.data;
 const label = lang === 'de' ? 'Heute' : 'Today';
 ---
-<Section id="practice" num="03" label={label} title={title}>
+<Section id="practice" num="03" label={label}>
   <ol class="practice__list">
     {entries.map((e, i) => (
       <li class="practice__item reveal">
