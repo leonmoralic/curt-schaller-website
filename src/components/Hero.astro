@@ -1,0 +1,33 @@
+---
+import { getEntry } from 'astro:content';
+import '../styles/components/hero.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const hero = await getEntry('hero', lang);
+if (!hero) throw new Error(`Missing hero content for ${lang}`);
+const { Content } = await hero.render();
+const { kicker, headlineLines, stats, image, imageAlt } = hero.data;
+---
+<section class="hero container" id="hero">
+  <div class="hero__copy">
+    <div class="hero__kicker reveal d1"><span class="star">★</span>{kicker}</div>
+    <h1 class="hero__title reveal d2" data-split>
+      {headlineLines.map((line) => (
+        <span class="line">{line.emphasis ? <em>{line.text}</em> : line.text}</span>
+      ))}
+    </h1>
+    <div class="hero__sub reveal d3"><Content /></div>
+    <div class="hero__creds reveal d4">
+      {stats.map((s) => (
+        <div>
+          <b data-count={s.count ?? ''} data-suffix={s.suffix ?? ''}>{s.value}</b>
+          <span>{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="hero__img reveal d2">
+    <img src={image} alt={imageAlt} width="800" height="1000" />
+  </div>
+</section>
