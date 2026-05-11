@@ -2,7 +2,7 @@
 lang: en
 kicker: Academy Award — Sci-Tech 2025
 headlineLines:
-  - { text: "The hand", emphasis: false }
+  - { text: "The mind", emphasis: false }
   - { text: "behind", emphasis: true }
   - { text: "the motion.", emphasis: false }
 stats:
