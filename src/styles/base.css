@@ -115,3 +115,9 @@ img { max-width: 100%; display: block; }
     scroll-behavior: auto !important;
   }
 }
+
+.reveal { opacity: 1; transform: none; }
+html.js .reveal { opacity: 0; transform: translateY(30px); }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity: 1; transform: none; }
+}
