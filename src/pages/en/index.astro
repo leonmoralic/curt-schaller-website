@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Topbar from '../../components/Topbar.astro';
-import Ticker from '../../components/Ticker.astro';
 import LanguageToggle from '../../components/LanguageToggle.astro';
 import Hero from '../../components/Hero.astro';
 import About from '../../components/About.astro';
@@ -14,7 +13,6 @@ import Footer from '../../components/Footer.astro';
 ---
 <BaseLayout lang="en" title="Curt O. Schaller — Business Card" description="Curt O. Schaller — Inventor of the ARRI TRINITY 2, Academy Award winner Sci-Tech 2025. Steadicam operator, workshops, R&D.">
   <Topbar>
-    <Ticker slot="ticker" items={["Personal Card", "MMXXV", "curt@cos-cam.com", "Munich — Worldwide", "ARRI TRINITY 2", "Academy Award 2025"]} />
     <LanguageToggle slot="toggle" current="en" />
   </Topbar>
   <main>
