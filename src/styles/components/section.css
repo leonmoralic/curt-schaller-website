@@ -2,6 +2,8 @@
   position: relative;
   padding: var(--space-16) 0;
   border-top: 1px solid var(--rule);
+  /* keep anchor links clear of the sticky topbar */
+  scroll-margin-top: var(--topbar-height);
 }
 .section--alt { background: var(--bg-2); }
 .section__inner {
@@ -19,7 +21,7 @@
   text-transform: uppercase;
   color: var(--gold-2);
   position: sticky;
-  top: calc(var(--space-8));
+  top: calc(var(--topbar-height) + var(--space-3));
   align-self: start;
   display: flex;
   flex-direction: column;

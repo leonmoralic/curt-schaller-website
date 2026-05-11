@@ -1,6 +1,7 @@
 .practice {
   padding: var(--space-16) 0;
   border-top: 1px solid var(--rule);
+  scroll-margin-top: var(--topbar-height);
 }
 .practice__inner {}
 

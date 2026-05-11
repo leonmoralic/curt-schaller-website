@@ -33,6 +33,7 @@
   --container: 1280px;
   --gutter: 1rem;
   --pad-x-mobile: 1.5rem;
+  --topbar-height: 4.5rem;
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);

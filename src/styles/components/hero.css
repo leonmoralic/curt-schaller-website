@@ -4,6 +4,7 @@
 .hero {
   position: relative;
   overflow: hidden;
+  scroll-margin-top: var(--topbar-height);
   --mx: 50%;
   --my: 30%;
 }
