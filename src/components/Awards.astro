@@ -1,0 +1,25 @@
+---
+import { getEntry } from 'astro:content';
+import Section from './Section.astro';
+import '../styles/components/awards.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const a = await getEntry('awards', lang);
+if (!a) throw new Error(`Missing awards content for ${lang}`);
+const { title, entries } = a.data;
+---
+<Section id="awards" num="03" label="Awards" title={title}>
+  <div class="awards">
+    {entries.map((e) => (
+      <div class="award reveal">
+        <span class="award__year">{e.year}</span>
+        <div>
+          <div class="award__title">{e.title}</div>
+          <p class="award__body">{e.body}</p>
+          {e.source && <span class="award__source">{e.source}</span>}
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
