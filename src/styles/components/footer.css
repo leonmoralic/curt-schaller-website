@@ -1,0 +1,13 @@
+.footer {
+  border-top: 1px solid var(--rule);
+  padding: var(--space-6) 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3); }
+.footer__links { display: flex; gap: var(--space-3); }
+.footer__links a { color: var(--mute); }
+.footer__links a:hover { color: var(--ink); }

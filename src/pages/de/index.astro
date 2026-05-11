@@ -4,11 +4,27 @@ import Topbar from '../../components/Topbar.astro';
 import Ticker from '../../components/Ticker.astro';
 import LanguageToggle from '../../components/LanguageToggle.astro';
 import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Inventions from '../../components/Inventions.astro';
+import Awards from '../../components/Awards.astro';
+import Filmography from '../../components/Filmography.astro';
+import Workshops from '../../components/Workshops.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
 ---
-<BaseLayout lang="de" title="Curt O. Schaller — Visitenkarte" description="Curt O. Schaller — Erfinder des ARRI TRINITY, Academy Award Preisträger.">
+<BaseLayout lang="de" title="Curt O. Schaller — Visitenkarte" description="Curt O. Schaller — Erfinder des ARRI TRINITY 2, Academy Award Preisträger Sci-Tech 2025. Steadicam Operator, Workshops, R&D.">
   <Topbar>
     <Ticker slot="ticker" items={["Personal Card", "MMXXV", "curt@cos-cam.com", "München — Worldwide", "ARRI TRINITY 2", "Academy Award 2025"]} />
     <LanguageToggle slot="toggle" current="de" />
   </Topbar>
-  <Hero lang="de" />
+  <main>
+    <Hero lang="de" />
+    <About lang="de" />
+    <Inventions lang="de" />
+    <Awards lang="de" />
+    <Filmography lang="de" />
+    <Workshops lang="de" />
+    <Contact lang="de" />
+  </main>
+  <Footer lang="de" />
 </BaseLayout>

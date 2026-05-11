@@ -1,0 +1,20 @@
+---
+import '../styles/components/footer.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const labels = {
+  de: { impressum: 'Impressum', privacy: 'Datenschutz' },
+  en: { impressum: 'Imprint', privacy: 'Privacy' },
+};
+const l = labels[lang];
+---
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© Curt O. Schaller — MMXXV</span>
+    <nav class="footer__links">
+      <a href="/impressum">{l.impressum}</a>
+      <a href="/datenschutz">{l.privacy}</a>
+    </nav>
+  </div>
+</footer>
