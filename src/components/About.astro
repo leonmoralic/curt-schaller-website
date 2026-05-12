@@ -22,6 +22,25 @@ const { title, timeline } = about.data;
         </div>
         <div class="tl__rail" aria-hidden="true">
           <span class="tl__dot" />
+          {t.current && (
+            <svg class="tl__oscar" viewBox="0 0 28 70" aria-hidden="true">
+              {/* Stylized Oscar-trophy silhouette: figure on a tiered pedestal */}
+              {/* Head */}
+              <ellipse cx="14" cy="9" rx="4" ry="5" fill="currentColor" />
+              {/* Body — broad shoulders narrowing to waist */}
+              <path d="M9 24 L11 36 L11 46 L17 46 L17 36 L19 24 L18 15 L10 15 Z" fill="currentColor" />
+              {/* Sword vertical */}
+              <rect x="13" y="14" width="2" height="34" fill="currentColor" />
+              {/* Sword crossguard */}
+              <rect x="10" y="22" width="8" height="1.6" fill="currentColor" />
+              {/* Legs/calves tapering into the pedestal */}
+              <path d="M11.5 46 L13 56 L15 56 L16.5 46 Z" fill="currentColor" />
+              {/* Pedestal — three Art-Deco tiers */}
+              <rect x="6" y="56" width="16" height="4" fill="currentColor" />
+              <rect x="4" y="60" width="20" height="4" fill="currentColor" />
+              <rect x="6" y="64" width="16" height="4" fill="currentColor" />
+            </svg>
+          )}
         </div>
         <div class="tl__copy">
           <h3 class="tl__title" set:html={t.title} />

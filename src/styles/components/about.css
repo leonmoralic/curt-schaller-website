@@ -154,6 +154,57 @@ html.js .tl__row {
   box-shadow: 0 0 0 4px rgba(200, 165, 88, 0.15);
 }
 
+/* ============== Oscar emerge ============== */
+/* On the current (final) row, an Oscar-trophy silhouette grows out of
+   the gold dot once the scroll-playhead reaches it. Anchor: pedestal
+   sits at the dot's vertical position, figure rises upward. */
+
+.tl__oscar {
+  position: absolute;
+  top: 0.95rem;            /* same y as .tl__dot */
+  left: 50%;
+  width: 28px;
+  height: 70px;
+  color: var(--gold);
+  pointer-events: none;
+  z-index: 2;
+  transform: translate(-50%, -86%) scale(0);
+  transform-origin: 50% 100%;
+  opacity: 0;
+  filter: drop-shadow(0 0 12px rgba(200, 165, 88, 0.6))
+          drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s var(--ease-out),
+              opacity 0.4s var(--ease-out);
+}
+
+@keyframes oscar-emerge {
+  0%   { transform: translate(-50%, -86%) scale(0); }
+  55%  { transform: translate(-50%, -86%) scale(1.12); }
+  75%  { transform: translate(-50%, -86%) scale(0.96); }
+  100% { transform: translate(-50%, -86%) scale(1); }
+}
+
+.tl__row--current.tl__row--passed .tl__oscar {
+  opacity: 1;
+  transform: translate(-50%, -86%) scale(1);
+  animation: oscar-emerge 1s var(--ease-out);
+}
+
+/* When the Oscar arrives, the underlying dot fades a touch and shrinks
+   so the pedestal of the trophy sits cleanly without a doubled-up
+   circle showing through. */
+.tl__row--current.tl__row--passed .tl__dot {
+  opacity: 0.35;
+  transform: translateX(-50%) scale(0.7);
+  transition: opacity 0.4s var(--ease-out),
+              transform 0.4s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl__oscar { transition: opacity 0.2s linear; animation: none; }
+  .tl__row--current.tl__row--passed .tl__oscar { transform: translate(-50%, -86%) scale(1); }
+}
+
 /* Right column: title + body */
 .tl__copy {
   padding-top: 0.25rem;
