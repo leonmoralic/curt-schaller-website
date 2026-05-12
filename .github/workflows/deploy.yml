@@ -34,20 +34,30 @@ jobs:
         run: pnpm build
         # outputs dist/ — that's the whole static site
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
-          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          # Hostinger's FTPS TLS handshake times out from GitHub runners
-          # on the standard shared-hosting tier. Plain FTP works and is
-          # acceptable here: only static HTML/CSS/JS travels in the clear,
-          # the credentials stay in GitHub Secrets.
-          protocol: ftp
-          port: 21
-          timeout: 60000
-          local-dir: ./dist/
-          server-dir: ${{ secrets.HOSTINGER_FTP_SERVER_DIR || '/public_html/' }}
-          log-level: verbose
-          dangerous-clean-slate: false
+      # The Node-based FTP action keeps timing out on Hostinger's FTP
+      # banner; lftp is the more battle-tested Unix client with proper
+      # retries, passive-mode handling, and parallel uploads.
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy to Hostinger via lftp
+        env:
+          FTP_HOST: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          FTP_USER: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          FTP_DIR: ${{ secrets.HOSTINGER_FTP_SERVER_DIR || '/public_html/' }}
+        run: |
+          lftp -d -c "
+            set ftp:ssl-allow no;
+            set ftp:passive-mode true;
+            set ftp:use-feat no;
+            set ftp:prefer-epsv false;
+            set net:timeout 30;
+            set net:max-retries 5;
+            set net:reconnect-interval-base 5;
+            set net:reconnect-interval-multiplier 1;
+            set cmd:fail-exit yes;
+            open -u \"$FTP_USER\",\"$FTP_PASS\" \"$FTP_HOST\";
+            mirror -R --parallel=4 --verbose --delete-first=false ./dist/ \"$FTP_DIR\";
+            bye
+          "
