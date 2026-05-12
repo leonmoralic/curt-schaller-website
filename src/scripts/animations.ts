@@ -118,7 +118,14 @@ function initTimelineScrub() {
       playhead.style.top = `${y}px`;
 
       rows.forEach((row, i) => {
-        if (y >= dotYs[i] - 4) row.classList.add('tl__row--passed');
+        // Default trigger: a hair before the playhead hits the dot's centre.
+        // The current (final) row uses a much earlier offset so the Oscar
+        // emerge starts as the playhead is approaching the dot — by the
+        // time playhead and dot visually meet, the trophy reveal is already
+        // playing out instead of starting from zero.
+        const isCurrent = row.classList.contains('tl__row--current');
+        const offset = isCurrent ? 90 : 4;
+        if (y >= dotYs[i] - offset) row.classList.add('tl__row--passed');
         else row.classList.remove('tl__row--passed');
       });
     },
