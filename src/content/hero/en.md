@@ -12,6 +12,6 @@ image: /images/curt-master.png
 imageAlt: Curt O. Schaller with the Academy Scientific and Engineering Award 2025
 ---
 
-**Curt O. Schaller** is a cinematographer and the developer of ARRI's camera stabilization systems. In 2025 he received the Academy Scientific and Engineering Award together with Dr.&nbsp;Roman&nbsp;Foltyn for the concept, design, and development of TRINITY&nbsp;2.
+**Curt O. Schaller** is a cinematographer and the developer of ARRI's camera stabilization systems. In 2025 he received the Academy Scientific and Engineering Award for the concept, design, and development of TRINITY&nbsp;2.
 
 <!-- SOURCE: Curt's Vita text, 2026-05-11; Foltyn co-recipient confirmed -->
