@@ -58,6 +58,6 @@ jobs:
             set net:reconnect-interval-multiplier 1;
             set cmd:fail-exit yes;
             open -u \"$FTP_USER\",\"$FTP_PASS\" \"$FTP_HOST\";
-            mirror -R --parallel=4 --verbose --delete-first=false ./dist/ \"$FTP_DIR\";
+            mirror -R --parallel=4 --verbose ./dist/ \"$FTP_DIR\";
             bye
           "
