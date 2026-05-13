@@ -44,10 +44,10 @@
 @media (min-width: 900px) {
   .hero__inner {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.4fr);
-    align-items: end;
+    align-items: center;
     gap: var(--space-4);
-    padding: var(--space-16) var(--pad-x-mobile) var(--space-6);
-    min-height: clamp(620px, 78vh, 860px);
+    padding: var(--space-5) var(--pad-x-mobile) var(--space-6);
+    min-height: clamp(470px, 58vh, 650px);
   }
 }
 
