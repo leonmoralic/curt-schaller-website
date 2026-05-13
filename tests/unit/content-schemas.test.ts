@@ -19,6 +19,39 @@ describe('content schemas', () => {
     expect(parsed.entries[0].patents).toHaveLength(1);
   });
 
+  it('accepts an inventions patentBlock with families and active flags', () => {
+    const parsed = inventionsSchema.parse({
+      lang: 'de',
+      title: 'Erfindungen',
+      entries: [],
+      patentBlock: {
+        heading: 'Patente',
+        intro: 'TRINITY basiert auf 19 Patenten.',
+        families: [
+          {
+            title: 'Camera stabilization arrangement',
+            note: '(TRINITY)',
+            patents: [
+              { id: 'DE102022104329 A1', active: true },
+              { id: 'EP4236339 A1' },
+            ],
+          },
+        ],
+      },
+    });
+    expect(parsed.patentBlock?.families[0].patents[0].active).toBe(true);
+    expect(parsed.patentBlock?.families[0].patents[1].active).toBe(false);
+  });
+
+  it('accepts inventions content without patentBlock', () => {
+    const parsed = inventionsSchema.parse({
+      lang: 'de',
+      title: 'Erfindungen',
+      entries: [],
+    });
+    expect(parsed.patentBlock).toBeUndefined();
+  });
+
   it('defaults patents to an empty array when omitted', () => {
     const parsed = inventionsSchema.parse({
       lang: 'de',

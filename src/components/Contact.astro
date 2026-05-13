@@ -9,7 +9,7 @@ const c = await getEntry('contact', lang);
 if (!c) throw new Error(`Missing contact content for ${lang}`);
 const { title, letter, signature, email, buttonLabel, location, links } = c.data;
 ---
-<Section id="contact" num="04" label="Contact" title={title} alt>
+<Section id="contact" num="05" label="Contact" title={title}>
   <div class="contact reveal">
     <p class="contact__letter">{letter}</p>
     <p class="contact__signature">{signature}</p>

@@ -21,5 +21,113 @@
       "patents": [],
       "award": "Academy Scientific and Engineering Award 2025"
     }
-  ]
+  ],
+  "patentBlock": {
+    "heading": "Patents & <em>property rights.</em>",
+    "intro": "The following 19 patents and 27 property rights are by Curt O. Schaller. The TRINITY system is built on them — each describes a function or solution also embodied in TRINITY.",
+    "families": [
+      {
+        "title": "Camera stabilization arrangement",
+        "note": "TRINITY",
+        "patents": [
+          { "id": "DE102022104329 A1", "active": true },
+          { "id": "EP4236339 A1", "active": true },
+          { "id": "US2023/0269473 A1", "active": true },
+          { "id": "US12284441 B2", "active": true },
+          { "id": "CN116647757 A", "active": true }
+        ]
+      },
+      {
+        "title": "Locking / blocking device for camera holder",
+        "note": "TRINITY related",
+        "patents": [
+          { "id": "DE202021104086 U1", "active": true },
+          { "id": "EP4141313 A1", "active": true },
+          { "id": "EP4141313 B1", "active": true },
+          { "id": "US2023/0132829 A1", "active": true },
+          { "id": "US11946586 B2", "active": true },
+          { "id": "CN115681690 A", "active": true },
+          { "id": "CN115681690 B", "active": true }
+        ]
+      },
+      {
+        "title": "Horizon-stabilized camera carrier",
+        "note": "TRINITY related",
+        "patents": [
+          { "id": "DE102023117835 A1", "active": true }
+        ]
+      },
+      {
+        "title": "Mount for camera or camera accessory",
+        "note": "TRINITY related",
+        "patents": [
+          { "id": "USD1008344 S1", "active": true }
+        ]
+      },
+      {
+        "title": "Decoupled weight compensation system for a camera balance device",
+        "patents": [
+          { "id": "WO2003023273 A1" },
+          { "id": "DE10145197 A1" },
+          { "id": "DE10145197 B4" },
+          { "id": "EP1430250 A1" },
+          { "id": "EP1430250 B1" },
+          { "id": "ATE286224 T1" },
+          { "id": "AU2002339543 A1" },
+          { "id": "AU2002339543 B2" },
+          { "id": "US2005/0053371 A1" },
+          { "id": "US7390131 B2" },
+          { "id": "JP2005502846 A" },
+          { "id": "JP4191601 B2" }
+        ]
+      },
+      {
+        "title": "Cardanic suspension device for a camera balance device",
+        "patents": [
+          { "id": "EP1425535 A1" },
+          { "id": "EP1425535 B1" },
+          { "id": "AU2002327856 A1" },
+          { "id": "AU2002325953 A1" },
+          { "id": "US2005/0031336 A1" },
+          { "id": "US2005/0036781 A1" },
+          { "id": "US7192203 B2" },
+          { "id": "US7255499 B2" }
+        ]
+      },
+      {
+        "title": "Body-worn camera support with multifunctional electrical assembly",
+        "patents": [
+          { "id": "WO2003024093 A1" },
+          { "id": "DE national entries from WO2003024093" },
+          { "id": "AU2002337088 A1" },
+          { "id": "US7646424 B2" }
+        ]
+      },
+      {
+        "title": "Body-mounted support / spring arm and body harness",
+        "patents": [
+          { "id": "DE102005017487 A1" },
+          { "id": "DE502006000415 D1" },
+          { "id": "EP1712828 A2" },
+          { "id": "EP1712828 A3" },
+          { "id": "EP1712828 B1" },
+          { "id": "ATE388370 T1" },
+          { "id": "AU2006201355 A1" },
+          { "id": "AU2006201355 B2" },
+          { "id": "JP2006301621 A" },
+          { "id": "US2006/0258495 A1" },
+          { "id": "US7562851 B2" }
+        ]
+      },
+      {
+        "title": "Camera stabilization device and camera support device",
+        "patents": [
+          { "id": "DE102015107483 A1" },
+          { "id": "DE102015107483 B4", "active": true },
+          { "id": "EP3101327 A1" },
+          { "id": "EP3101327 B1", "active": true }
+        ]
+      }
+    ]
+  }
 }

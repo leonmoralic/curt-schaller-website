@@ -1,0 +1,39 @@
+---
+import { getEntry } from 'astro:content';
+import Section from './Section.astro';
+import '../styles/components/inventions.css';
+
+interface Props { lang: 'de' | 'en' }
+const { lang } = Astro.props;
+const inv = await getEntry('inventions', lang);
+if (!inv) throw new Error(`Missing inventions content for ${lang}`);
+const { patentBlock } = inv.data;
+if (!patentBlock) throw new Error(`Missing patentBlock for ${lang}`);
+const label = lang === 'de' ? 'Patente' : 'Patents';
+const legend = lang === 'de' ? 'aktiv in Kraft' : 'active in force';
+---
+<Section id="patents" num="03" label={label} title={patentBlock.heading}>
+  <p class="patents__intro reveal">{patentBlock.intro}</p>
+  <p class="patents__legend reveal" aria-label={legend}>
+    <span class="patent-id__dot" aria-hidden="true"></span>
+    <span>{legend}</span>
+  </p>
+  <div class="patents__families">
+    {patentBlock.families.map((fam) => (
+      <article class="patent-family">
+        <header class="patent-family__head">
+          <h3 class="patent-family__title">{fam.title}</h3>
+          {fam.note && <span class="patent-family__note">{fam.note}</span>}
+        </header>
+        <ul class="patent-family__list">
+          {fam.patents.map((p) => (
+            <li class:list={["patent-id", p.active && "is-active"]}>
+              <span class="patent-id__code">{p.id}</span>
+              {p.active && <span class="patent-id__dot" aria-label="active" />}
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+</Section>

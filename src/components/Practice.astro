@@ -10,7 +10,7 @@ if (!p) throw new Error(`Missing practice content for ${lang}`);
 const { entries, email } = p.data;
 const label = lang === 'de' ? 'Heute' : 'Today';
 ---
-<Section id="practice" num="03" label={label}>
+<Section id="practice" num="04" label={label} alt>
   <ol class="practice__list">
     {entries.map((e, i) => (
       <li class="practice__item reveal">

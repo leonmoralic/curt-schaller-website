@@ -49,6 +49,24 @@ export const inventionsSchema = z.object({
       award: z.string().optional(),
     }),
   ),
+  patentBlock: z
+    .object({
+      heading: z.string(),
+      intro: z.string(),
+      families: z.array(
+        z.object({
+          title: z.string(),
+          note: z.string().optional(),
+          patents: z.array(
+            z.object({
+              id: z.string(),
+              active: z.boolean().default(false),
+            }),
+          ),
+        }),
+      ),
+    })
+    .optional(),
 });
 
 export const practiceSchema = z.object({
