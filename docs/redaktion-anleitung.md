@@ -5,28 +5,37 @@ bearbeiten. Es gibt einen Editor mit Eingabefeldern, kein Programmieren.
 
 ## Einmalig einrichten
 
-1. **GitHub-Konto anlegen** auf https://github.com — kostenlos, dauert zwei
-   Minuten. GitHub ist der Ort, an dem die Website liegt; das Konto ist nur
-   die Anmeldung.
-2. Leon lädt dich als Mitarbeiter zum Projekt ein. Du bekommst eine E-Mail
-   von GitHub und klickst darin auf Annehmen.
+Du brauchst kein GitHub-Konto und musst dich nirgends registrieren.
 
-Danach ist nichts weiter zu tun.
+Leon gibt dir einen **Zugangsschlüssel** — eine lange Zeichenfolge, die mit
+`ghp_` beginnt. Bewahre sie auf (Passwortmanager oder ausgedruckt im
+Schreibtisch), du brauchst sie nur selten, aber dann sicher.
+
+## Anmelden
+
+1. **https://cos-cam.com/admin** aufrufen (am besten als Lesezeichen setzen).
+2. Auf **Sign In Using Access Token** klicken — den unteren der beiden Knöpfe,
+   nicht „Sign In with GitHub".
+3. Den Zugangsschlüssel einfügen und bestätigen.
+
+Der Browser merkt sich die Anmeldung. Beim nächsten Mal geht es direkt weiter.
+
+Nach dem Schlüssel gefragt wirst du wieder, wenn du den Browser wechselst, ein
+anderes Gerät benutzt oder die Browserdaten gelöscht hast. Dann einfach erneut
+einfügen. Wenn du ihn nicht mehr findest, hat Leon ihn.
 
 ## Bearbeiten
 
-1. **https://cos-cam.com/admin** aufrufen (am besten als Lesezeichen).
-2. Auf **Sign In with GitHub** klicken und mit deinem GitHub-Konto anmelden.
-3. Links stehen die Bereiche der Website:
+1. Links stehen die Bereiche der Website:
    - **Startseite (Kopfbereich)** — Überschrift, Kennzahlen, Foto, Einleitung
    - **01 Vita** — Zeitleiste und Fließtext
    - **02+03 Erfindungen und Patente** — Erfindungen, Patentfamilien
    - **04 Heute** — Workshops, Consulting, Talks
    - **05 Kontakt** — Anschreiben, E-Mail-Adresse
-4. Bereich anklicken, Felder ausfüllen, **Save** drücken.
-5. Nach etwa zwei Minuten ist die Änderung auf cos-cam.com sichtbar.
-   Falls nicht sofort: Seite mit Strg+Umschalt+R (Mac: Cmd+Umschalt+R) neu
-   laden, der Browser hält die alte Fassung manchmal fest.
+2. Bereich anklicken, Felder ausfüllen, **Save** drücken.
+3. Nach etwa zwei Minuten ist die Änderung auf cos-cam.com sichtbar.
+   Falls nicht sofort: Seite mit Cmd+Umschalt+R (Windows: Strg+Umschalt+R)
+   neu laden, der Browser hält die alte Fassung manchmal fest.
 
 ## Deutsch und Englisch
 
@@ -69,3 +78,7 @@ Animationen.
 
 Änderung gespeichert, aber nach zehn Minuten nicht sichtbar: bei Leon melden.
 Er sieht im Projekt, woran es lag.
+
+Der Editor fragt nach dem Zugangsschlüssel und deiner passt nicht mehr: Der
+Schlüssel läuft nach einer festgelegten Zeit ab. Leon stellt dir dann einen
+neuen aus, das dauert zwei Minuten.
