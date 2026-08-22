@@ -3,7 +3,10 @@
 // triggering Astro's `astro:content` virtual module.
 import { z } from 'astro/zod';
 
-const langPrefix = z.enum(['de', 'en']);
+// Optional: der Sprachcode steckt bereits im Dateinamen (de.md / en.md) und
+// wird von keinem Bauteil gelesen. Optional, damit der Build nicht bricht,
+// wenn der Redaktions-Editor das Feld beim Speichern nicht mitschreibt.
+const langPrefix = z.enum(['de', 'en']).optional();
 
 export const heroSchema = z.object({
   lang: langPrefix,

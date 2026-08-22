@@ -1,0 +1,171 @@
+# Sveltia CMS — Redaktionsoberflaeche fuer cos-cam.com
+#
+# Jede Datei unter src/content/ existiert zweimal: de + en. Der Editor zeigt
+# beide Sprachen nebeneinander. Felder mit "i18n: duplicate" werden nur einmal
+# gepflegt und in beide Sprachdateien geschrieben (Jahreszahlen, Patentnummern,
+# E-Mail, Bilder) — so koennen DE und EN dort nicht auseinanderlaufen.
+
+backend:
+  name: github
+  repo: leonmoralic/curt-schaller-website
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+i18n:
+  structure: multiple_files
+  locales: [de, en]
+  default_locale: de
+
+collections:
+  # ---------------------------------------------------------------- Startseite
+  - name: hero
+    label: Startseite (Kopfbereich)
+    i18n: true
+    files:
+      - name: hero
+        label: Kopfbereich
+        file: src/content/hero/{{locale}}.md
+        i18n: true
+        fields:
+          - { name: kicker, label: Zeile ueber der Ueberschrift, widget: string, i18n: true }
+          - name: headlineLines
+            label: Grosse Ueberschrift (eine Zeile pro Eintrag)
+            widget: list
+            i18n: true
+            fields:
+              - { name: text, label: Text, widget: string, i18n: true }
+              - { name: emphasis, label: Kursiv darstellen, widget: boolean, default: false, required: false, i18n: duplicate }
+          - name: stats
+            label: Kennzahlen rechts unten
+            widget: list
+            i18n: true
+            fields:
+              - { name: label, label: Beschriftung, widget: string, i18n: true }
+              - { name: value, label: 'Wert (z. B. "40+" oder "2025")', widget: string, i18n: duplicate }
+              - { name: count, label: Zahl zum Hochzaehlen (optional), widget: number, value_type: int, required: false, i18n: duplicate }
+              - { name: suffix, label: 'Zeichen hinter der Zahl (optional, z. B. "+")', widget: string, required: false, i18n: duplicate }
+          - { name: image, label: Foto von Curt, widget: image, i18n: duplicate, hint: "Achtung, das OSCARS-Lettering ist Teil dieses Bildes. Ein neues Foto ohne Lettering laesst den Schriftzug verschwinden." }
+          - { name: imageAlt, label: Bildbeschreibung (fuer Screenreader), widget: string, i18n: true }
+          - { name: body, label: Einleitungstext, widget: markdown, i18n: true }
+
+  # ---------------------------------------------------------------------- Vita
+  - name: about
+    label: 01 Vita
+    i18n: true
+    files:
+      - name: about
+        label: Vita und Zeitleiste
+        file: src/content/about/{{locale}}.md
+        i18n: true
+        fields:
+          - { name: title, label: Kapitel-Ueberschrift, widget: string, i18n: true, hint: "HTML erlaubt. Text zwischen <em> und </em> erscheint kursiv." }
+          - name: timeline
+            label: Stationen der Zeitleiste
+            widget: list
+            i18n: true
+            summary: '{{fields.year}} — {{fields.title}}'
+            fields:
+              - { name: year, label: Jahr, widget: string, i18n: duplicate }
+              - { name: yearSuffix, label: 'Zusatz hinter dem Jahr (optional, z. B. "s" fuer 1990s)', widget: string, required: false, i18n: true }
+              - { name: title, label: Titel der Station, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
+              - { name: body, label: Beschreibung, widget: text, i18n: true, hint: "HTML erlaubt (<em> kursiv, <span class=\"hl\"> hervorgehoben)." }
+              - { name: current, label: Letzte Station (Oscar-Statue erscheint hier), widget: boolean, default: false, required: false, i18n: duplicate }
+          - { name: body, label: Fliesstext unter der Zeitleiste, widget: markdown, i18n: true }
+
+  # --------------------------------------------------- Erfindungen und Patente
+  - name: inventions
+    label: 02+03 Erfindungen und Patente
+    i18n: true
+    files:
+      - name: inventions
+        label: Erfindungen und Patente
+        file: src/content/inventions/{{locale}}.json
+        i18n: true
+        fields:
+          - { name: title, label: Kapitel-Ueberschrift Erfindungen, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
+          - name: entries
+            label: Erfindungen
+            widget: list
+            i18n: true
+            summary: '{{fields.year}} — {{fields.name}}'
+            fields:
+              - { name: name, label: Name, widget: string, i18n: duplicate }
+              - { name: year, label: Jahr, widget: number, value_type: int, i18n: duplicate }
+              - { name: principle, label: Beschreibung, widget: text, i18n: true }
+              - { name: patents, label: Zugehoerige Patentnummern (optional), widget: list, field: { name: id, label: Nummer, widget: string }, required: false, i18n: duplicate }
+              - { name: award, label: Auszeichnung (optional), widget: string, required: false, i18n: true }
+          - name: patentBlock
+            label: Patent-Kapitel
+            widget: object
+            required: false
+            i18n: true
+            fields:
+              - { name: heading, label: Kapitel-Ueberschrift Patente, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
+              - { name: intro, label: Einleitungstext, widget: text, i18n: true }
+              - name: families
+                label: Patentfamilien
+                widget: list
+                i18n: true
+                summary: '{{fields.title}}'
+                fields:
+                  - { name: title, label: Titel der Familie, widget: string, i18n: true }
+                  - { name: note, label: 'Zusatz (optional, z. B. "TRINITY")', widget: string, required: false, i18n: true }
+                  - name: patents
+                    label: Patente
+                    widget: list
+                    i18n: duplicate
+                    summary: '{{fields.id}}'
+                    fields:
+                      - { name: id, label: Patentnummer, widget: string }
+                      - { name: active, label: Noch in Kraft (goldener Punkt), widget: boolean, default: false, required: false }
+
+  # --------------------------------------------------------------------- Heute
+  - name: practice
+    label: 04 Heute
+    i18n: true
+    files:
+      - name: practice
+        label: Angebot (Workshops, Consulting, Talks)
+        file: src/content/practice/{{locale}}.json
+        i18n: true
+        fields:
+          - { name: title, label: Kapitel-Ueberschrift, widget: string, i18n: true }
+          - name: entries
+            label: Leistungen
+            widget: list
+            i18n: true
+            summary: '{{fields.titleItalic}} {{fields.titleRest}}'
+            fields:
+              - { name: titleItalic, label: 'Titel, kursiver Teil', widget: string, i18n: true }
+              - { name: titleRest, label: 'Titel, normaler Teil', widget: string, i18n: true }
+              - { name: body, label: Beschreibung, widget: text, i18n: true }
+              - { name: tag, label: 'Kurzhinweis (z. B. "Muenchen · DACH")', widget: string, i18n: true }
+              - { name: mailSubject, label: Betreff der E-Mail bei Klick, widget: string, i18n: true }
+          - { name: email, label: E-Mail-Adresse fuer Anfragen, widget: string, i18n: duplicate }
+
+  # ------------------------------------------------------------------- Kontakt
+  - name: contact
+    label: 05 Kontakt
+    i18n: true
+    files:
+      - name: contact
+        label: Kontaktbereich
+        file: src/content/contact/{{locale}}.json
+        i18n: true
+        fields:
+          - { name: title, label: Kapitel-Ueberschrift, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
+          - { name: letter, label: Persoenlicher Text, widget: text, i18n: true }
+          - { name: signature, label: Unterschrift, widget: string, i18n: true }
+          - { name: email, label: E-Mail-Adresse, widget: string, i18n: duplicate }
+          - { name: buttonLabel, label: Beschriftung des Knopfes, widget: string, i18n: true }
+          - { name: location, label: Ortsangabe, widget: string, i18n: true }
+          - name: links
+            label: Weiterfuehrende Links (optional)
+            widget: list
+            required: false
+            i18n: true
+            fields:
+              - { name: label, label: Beschriftung, widget: string, i18n: true }
+              - { name: href, label: Adresse (vollstaendige URL), widget: string, i18n: duplicate }
