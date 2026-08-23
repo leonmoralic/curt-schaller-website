@@ -1,6 +1,16 @@
 ---
+import { getEntry } from 'astro:content';
 import '../styles/tokens.css';
 import '../styles/base.css';
+
+// Schriftwahl aus dem Redaktionsbereich. Faellt auf Fraunces zurueck,
+// solange nichts gesetzt ist.
+const FONT_STACKS = {
+  'fraunces': "'Fraunces', Georgia, 'Times New Roman', serif",
+  'inter-tight': "'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif",
+};
+const design = await getEntry('design', 'theme');
+const fontDisplay = FONT_STACKS[design?.data.fontPairing ?? 'fraunces'] ?? FONT_STACKS.fraunces;
 
 interface Props {
   lang: 'de' | 'en';
@@ -42,6 +52,7 @@ const personJsonLd = {
 <html lang={lang}>
   <head>
     <script is:inline>document.documentElement.classList.add('js');</script>
+    <style is:inline set:html={`:root{--font-display:${fontDisplay}}`}></style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 

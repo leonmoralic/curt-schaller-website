@@ -174,3 +174,26 @@ collections:
             fields:
               - { name: label, label: Beschriftung, widget: string, i18n: true }
               - { name: href, label: Adresse (vollstaendige URL), widget: string, i18n: duplicate }
+
+  # ---------------------------------------------------------------- Gestaltung
+  # Bewusst ohne i18n: die Schrift gilt fuer beide Sprachfassungen.
+  - name: design
+    label: Gestaltung
+    files:
+      - name: theme
+        label: Schriftart
+        file: src/content/design/theme.json
+        fields:
+          - name: fontPairing
+            label: Schriftart der Website
+            widget: select
+            default: fraunces
+            hint: >-
+              Betrifft alle Ueberschriften und Fliesstexte. Patentnummern und
+              Kapitelziffern bleiben unveraendert. Nach dem Speichern dauert es
+              rund zwei Minuten, dann in der Web-Vorschau auf "Neu laden".
+            options:
+              - label: 'Fraunces — Serif, mit echter Kursive (Ausgangszustand)'
+                value: fraunces
+              - label: 'Inter Tight — Grotesk, OHNE echte Kursive'
+                value: inter-tight

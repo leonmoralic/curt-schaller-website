@@ -5,6 +5,7 @@ import {
   inventionsSchema,
   practiceSchema,
   contactSchema,
+  designSchema,
 } from './schemas';
 
 export const heroCollection = defineCollection({ type: 'content', schema: heroSchema });
@@ -12,6 +13,7 @@ export const aboutCollection = defineCollection({ type: 'content', schema: about
 export const inventionsCollection = defineCollection({ type: 'data', schema: inventionsSchema });
 export const practiceCollection = defineCollection({ type: 'data', schema: practiceSchema });
 export const contactCollection = defineCollection({ type: 'data', schema: contactSchema });
+export const designCollection = defineCollection({ type: 'data', schema: designSchema });
 
 export const collections = {
   hero: heroCollection,
@@ -19,4 +21,5 @@ export const collections = {
   inventions: inventionsCollection,
   practice: practiceCollection,
   contact: contactCollection,
+  design: designCollection,
 };

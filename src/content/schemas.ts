@@ -99,3 +99,9 @@ export const contactSchema = z.object({
     .array(z.object({ label: z.string(), href: z.string().url() }))
     .default([]),
 });
+
+// Gestaltung. Bewusst NICHT zweisprachig: die Schriftwahl gilt fuer die
+// ganze Website, nicht je Sprachfassung.
+export const designSchema = z.object({
+  fontPairing: z.enum(['fraunces', 'inter-tight']).default('fraunces'),
+});

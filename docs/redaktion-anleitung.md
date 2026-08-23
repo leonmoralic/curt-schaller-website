@@ -58,6 +58,23 @@ Manche Felder gibt es nur einmal, weil sie in beiden Sprachen gleich sein
 müssen: Jahreszahlen, Patentnummern, die E-Mail-Adresse und das Foto. Diese
 änderst du einmal, und beide Sprachfassungen übernehmen den Wert.
 
+## Schriftart der Website
+
+Unter **Gestaltung → Schriftart** lässt sich die Schrift der ganzen Website
+umstellen. Zur Wahl stehen:
+
+- **Fraunces** — die Serifenschrift, mit der die Seite gestaltet wurde.
+- **Inter Tight** — eine serifenlose Alternative.
+
+Ein Hinweis dazu, weil er sich nicht von selbst erschließt: Fraunces hat
+eine echte Kursive, Inter Tight nicht. Alle kursiv gesetzten Stellen — und
+davon lebt das Layout an vielen Stellen — werden mit Inter Tight vom Browser
+nur schräg gestellt statt richtig kursiv gesetzt. Das sieht sichtbar
+schlechter aus. Schau dir die Umstellung deshalb in der Web-Vorschau an,
+bevor du sie stehen lässt; zurückstellen geht jederzeit.
+
+Patentnummern und Kapitelziffern bleiben in beiden Fällen unverändert.
+
 ## Was du beachten solltest
 
 **HTML in Texten.** In einigen Überschriften stehen Zeichenfolgen wie
