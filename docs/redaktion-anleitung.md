@@ -37,6 +37,18 @@ einfügen. Wenn du ihn nicht mehr findest, hat Leon ihn.
    Falls nicht sofort: Seite mit Cmd+Umschalt+R (Windows: Strg+Umschalt+R)
    neu laden, der Browser hält die alte Fassung manchmal fest.
 
+## Die Website danebenlegen
+
+Unten rechts sitzt der Knopf **Website ansehen**. Er blendet die echte
+Website rechts neben dem Editor ein und springt automatisch zu dem
+Abschnitt, den du gerade bearbeitest. Oben im Rahmen kannst du zwischen
+**DE** und **EN** umschalten und die Seite **neu laden**. Die linke Kante
+lässt sich ziehen, wenn dir der Rahmen zu breit oder zu schmal ist.
+
+Wichtig: Dieser Rahmen zeigt die **veröffentlichte** Seite. Was du gerade
+tippst und noch nicht gespeichert hast, steht dort noch nicht drin. Nach dem
+Speichern etwa zwei Minuten warten und auf **Neu laden** klicken.
+
 ## Deutsch und Englisch
 
 Die Seite gibt es zweisprachig. Der Editor zeigt beide Sprachen

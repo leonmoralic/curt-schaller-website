@@ -10,6 +10,11 @@ backend:
   repo: leonmoralic/curt-schaller-website
   branch: main
 
+# Verweis auf die Website; Sveltia verlinkt sie aus der Oberflaeche heraus.
+site_url: https://cos-cam.com
+display_url: https://cos-cam.com
+logo_url: /favicon.svg
+
 media_folder: public/images
 public_folder: /images
 
