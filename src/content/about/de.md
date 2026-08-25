@@ -31,6 +31,11 @@ timeline:
     title: Wechsel zu <em>ARRI</em>
     body: Produktmanager für Kamerastabilisierungssysteme. Im selben Jahr <span class="hl">Cine Gear Technical Award</span> &amp; <span class="hl">cinecAward</span> für TRINITY.
     current: false
+  - year: '2016'
+    yearSuffix: ''
+    title: CINEC Award 2016 · Munich
+    body: Auszeichnung für die Entwicklung des TRINITY-Systems.
+    current: false
   - year: '2017'
     yearSuffix: ''
     title: BIRTV Award · Peking

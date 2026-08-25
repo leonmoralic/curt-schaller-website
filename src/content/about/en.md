@@ -31,26 +31,27 @@ timeline:
     title: Joins <em>ARRI</em>
     body: 'Product manager for camera stabilization systems. The same year: <span class="hl">Cine Gear Technical Award</span> &amp; <span class="hl">cinecAward</span> for TRINITY.'
     current: false
-  - year: '2017'
+  - year: '2016'
     yearSuffix: ''
     title: BIRTV Award · Beijing
     body: Honoured for the development of the TRINITY system.
     current: false
-  - year: '2022'
+  - year: '2017'
     yearSuffix: ''
     title: <em>TRINITY 2</em>
     body: Launch of the next-generation system at ARRI. Reduced weight, expanded stabilization modes, refined operating logic.
     current: false
-  - year: '2025'
+  - year: '2022'
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
     current: false
-  - year: '2026'
+  - year: '2025'
     yearSuffix: ''
     title: <em>Emmy Award - Engineering, Science & Technology</em>
     body: Awarded for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in life- and TV-productions worldwide.
     current: true
+  - year: '2026'
 lang: en
 ---
 
