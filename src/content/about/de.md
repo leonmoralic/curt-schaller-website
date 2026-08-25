@@ -24,7 +24,7 @@ timeline:
   - year: '2015'
     yearSuffix: ''
     title: <em>TRINITY</em>
-    body: Erstes Kamerastabilisierungssystem, das mechanische und elektronische Stabilisierung in einem Rig verbindet — entwickelt gemeinsam mit <span class="hl">Dr. Roman Foltyn</span>.
+    body: Erstes Kamera-Stabilisierungs-System, das mechanische und elektronische Stabilisierung in einem Rig verbindet — ab Ende 2014 entwickelt mit Unterstützung von <span class="hl">Dr. Roman Foltyn</span>.
     current: false
   - year: '2016'
     yearSuffix: ''
