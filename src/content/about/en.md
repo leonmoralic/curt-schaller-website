@@ -44,17 +44,22 @@ timeline:
   - year: '2025'
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
-    body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in film technology worldwide.
+    body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
     current: false
   - year: '2026'
+    yearSuffix: ''
+    title: <em>Emmy Award - Engineering, Science & Technology</em>
+    body: Awarded for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in life- and TV-productions worldwide.
     current: true
 lang: en
 ---
 
-Curt Oswald Schaller, born on 22 June 1964 in Munich, begins his training as a camera assistant and cinematographer in 1984 at the Bavaria Film and Television Studios. In the early 1990s he specialises in international documentaries; later he works as cinematographer and Steadicam operator for TV series, feature films, shows, and documentaries.
+Curt O. Schaller has developed two camera stabilization systems that became the world standard for the film industry — artemis (2001) and TRINITY (from late 2014, further developed into TRINITY 2, 2022). In 2025, he was honored with the Academy Scientific and Engineering Award (Oscar) for this work, followed in 2026 by the Engineering, Science & Technology Emmy Award from the Television Academy.
 
-In the late 1990s he begins to develop his own camera stabilization systems. The work culminates in 2001 with the launch of the artemis line at Sachtler — the world's first modular camera stabilization system, introduced at the NAB Show in Las Vegas. In 2015 he develops the TRINITY system together with Dr. Roman Foltyn, the first rig to combine mechanical and electronic stabilization in a single device.
+Before he developed systems, he needed them himself on set: training in 1984 at the Bavaria Film Studios, followed by years as a cameraman and Steadicam operator on primetime programming for Germany's public broadcasters and on international film and TV productions. This hands-on experience remains the foundation of his development work — and of his advisory work today.
 
-In April 2016 he moves the entire artemis portfolio to ARRI, where he advances its development as product manager and later brings TRINITY 2 to market. In 2025 the Academy of Motion Picture Arts and Sciences honours him with the Scientific and Engineering Award.
+Since 1984, he has moved through nearly every stage of the field: from operator to inventor to product manager at ARRI, where he guided a system to market maturity and global adoption. He now brings this experience to bear as a strategic advisor for internationally leading companies in camera support and systems integration — on product strategy, technical ecosystems, and their market introduction.
+
+Alongside this, he has shared his knowledge worldwide as a lecturer since 1998 (including at the Sachtler Academy, ARRI Academy, and Munich Filmwerkstatt) and speaks on invention, filmmaking craft, and the connection between humans and machines..
 
 <!-- SOURCE: Curt's Vita text + timeline stations, 2026-05-11 -->
