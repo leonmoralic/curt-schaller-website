@@ -45,6 +45,8 @@ timeline:
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in film technology worldwide.
+    current: false
+  - year: '2026'
     current: true
 lang: en
 ---
