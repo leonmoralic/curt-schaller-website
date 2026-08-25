@@ -1,18 +1,19 @@
 {
-  "lang": "de",
   "title": "Erfindungen & <em>Entwicklung.</em>",
   "entries": [
     {
       "name": "artemis",
       "year": 2001,
-      "principle": "Bei Sachtler entwickelt — das weltweit erste modular aufgebaute Kamerastabilisierungssystem. Vorgestellt auf der NAB Show in Las Vegas. Ein Baukasten-Konzept, das Operator unterschiedliche Kamerakonfigurationen aus einem gemeinsamen System zusammenstellen lässt.",
-      "patents": []
+      "principle": "Bei Sachtler entwickelt — das weltweit erste modular aufgebaute Kamera-Stabilisierungs-System für HD-Kameras. Vorgestellt auf der NAB Show in Las Vegas 2001. Ein Baukasten-Konzept, das Operator unterschiedliche Kamerakonfigurationen aus einem gemeinsamen System zusammenstellen lässt.\n→ Einsatz: Weltweit im professionellen Einsatz bei Steadicam-Operatoren. \nBis heute Referenz für modulare Kamerastabilisierung.",
+      "patents": [],
+      "award": ""
     },
     {
       "name": "TRINITY",
       "year": 2015,
       "principle": "Gemeinsam mit Dr. Roman Foltyn entwickelt. Erstes Hybrid-System, das mechanische Steadicam-Stabilisierung und elektronische Gimbal-Stabilisierung in einem einzigen Rig vereint. Ermöglicht stufenlos Bewegungen aus jeder Kameraposition — vom Boden bis über Kopf — ohne Setupwechsel.",
-      "patents": []
+      "patents": [],
+      "award": ""
     },
     {
       "name": "TRINITY 2",
@@ -30,104 +31,269 @@
         "title": "Kamerastabilisierungs-Anordnung",
         "note": "TRINITY",
         "patents": [
-          { "id": "DE102022104329 A1", "active": true },
-          { "id": "EP4236339 A1", "active": true },
-          { "id": "US2023/0269473 A1", "active": true },
-          { "id": "US12284441 B2", "active": true },
-          { "id": "CN116647757 A", "active": true }
+          {
+            "id": "DE102022104329 A1",
+            "active": true
+          },
+          {
+            "id": "EP4236339 A1",
+            "active": true
+          },
+          {
+            "id": "US2023/0269473 A1",
+            "active": true
+          },
+          {
+            "id": "US12284441 B2",
+            "active": true
+          },
+          {
+            "id": "CN116647757 A",
+            "active": true
+          }
         ]
       },
       {
         "title": "Verriegelungs- / Blockiereinrichtung für Kamerahalter",
         "note": "TRINITY-bezogen",
         "patents": [
-          { "id": "DE202021104086 U1", "active": true },
-          { "id": "EP4141313 A1", "active": true },
-          { "id": "EP4141313 B1", "active": true },
-          { "id": "US2023/0132829 A1", "active": true },
-          { "id": "US11946586 B2", "active": true },
-          { "id": "CN115681690 A", "active": true },
-          { "id": "CN115681690 B", "active": true }
+          {
+            "id": "DE202021104086 U1",
+            "active": true
+          },
+          {
+            "id": "EP4141313 A1",
+            "active": true
+          },
+          {
+            "id": "EP4141313 B1",
+            "active": true
+          },
+          {
+            "id": "US2023/0132829 A1",
+            "active": true
+          },
+          {
+            "id": "US11946586 B2",
+            "active": true
+          },
+          {
+            "id": "CN115681690 A",
+            "active": true
+          },
+          {
+            "id": "CN115681690 B",
+            "active": true
+          }
         ]
       },
       {
         "title": "Horizont-stabilisierter Kameraträger",
         "note": "TRINITY-bezogen",
         "patents": [
-          { "id": "DE102023117835 A1", "active": true }
+          {
+            "id": "DE102023117835 A1",
+            "active": true
+          }
         ]
       },
       {
         "title": "Halterung für Kamera oder Kamera-Zubehör",
         "note": "TRINITY-bezogen",
         "patents": [
-          { "id": "USD1008344 S1", "active": true }
+          {
+            "id": "USD1008344 S1",
+            "active": true
+          }
         ]
       },
       {
         "title": "Entkoppeltes Gewichtskompensationssystem für Kamera-Balance-Vorrichtung",
+        "note": "",
         "patents": [
-          { "id": "WO2003023273 A1" },
-          { "id": "DE10145197 A1" },
-          { "id": "DE10145197 B4" },
-          { "id": "EP1430250 A1" },
-          { "id": "EP1430250 B1" },
-          { "id": "ATE286224 T1" },
-          { "id": "AU2002339543 A1" },
-          { "id": "AU2002339543 B2" },
-          { "id": "US2005/0053371 A1" },
-          { "id": "US7390131 B2" },
-          { "id": "JP2005502846 A" },
-          { "id": "JP4191601 B2" }
+          {
+            "id": "WO2003023273 A1",
+            "active": false
+          },
+          {
+            "id": "DE10145197 A1",
+            "active": false
+          },
+          {
+            "id": "DE10145197 B4",
+            "active": false
+          },
+          {
+            "id": "EP1430250 A1",
+            "active": false
+          },
+          {
+            "id": "EP1430250 B1",
+            "active": false
+          },
+          {
+            "id": "ATE286224 T1",
+            "active": false
+          },
+          {
+            "id": "AU2002339543 A1",
+            "active": false
+          },
+          {
+            "id": "AU2002339543 B2",
+            "active": false
+          },
+          {
+            "id": "US2005/0053371 A1",
+            "active": false
+          },
+          {
+            "id": "US7390131 B2",
+            "active": false
+          },
+          {
+            "id": "JP2005502846 A",
+            "active": false
+          },
+          {
+            "id": "JP4191601 B2",
+            "active": false
+          }
         ]
       },
       {
         "title": "Kardanische Aufhängung für Kamera-Balance-Vorrichtung",
+        "note": "",
         "patents": [
-          { "id": "EP1425535 A1" },
-          { "id": "EP1425535 B1" },
-          { "id": "AU2002327856 A1" },
-          { "id": "AU2002325953 A1" },
-          { "id": "US2005/0031336 A1" },
-          { "id": "US2005/0036781 A1" },
-          { "id": "US7192203 B2" },
-          { "id": "US7255499 B2" }
+          {
+            "id": "EP1425535 A1",
+            "active": false
+          },
+          {
+            "id": "EP1425535 B1",
+            "active": false
+          },
+          {
+            "id": "AU2002327856 A1",
+            "active": false
+          },
+          {
+            "id": "AU2002325953 A1",
+            "active": false
+          },
+          {
+            "id": "US2005/0031336 A1",
+            "active": false
+          },
+          {
+            "id": "US2005/0036781 A1",
+            "active": false
+          },
+          {
+            "id": "US7192203 B2",
+            "active": false
+          },
+          {
+            "id": "US7255499 B2",
+            "active": false
+          }
         ]
       },
       {
         "title": "Körpergetragenes Kamera-Trägersystem mit multifunktionaler elektrischer Baugruppe",
+        "note": "",
         "patents": [
-          { "id": "WO2003024093 A1" },
-          { "id": "DE-Nationalisierungen zu WO2003024093" },
-          { "id": "AU2002337088 A1" },
-          { "id": "US7646424 B2" }
+          {
+            "id": "WO2003024093 A1",
+            "active": false
+          },
+          {
+            "id": "DE-Nationalisierungen zu WO2003024093",
+            "active": false
+          },
+          {
+            "id": "AU2002337088 A1",
+            "active": false
+          },
+          {
+            "id": "US7646424 B2",
+            "active": false
+          }
         ]
       },
       {
         "title": "Körpergetragener Tragearm / Federarm und Körperhalterung",
+        "note": "",
         "patents": [
-          { "id": "DE102005017487 A1" },
-          { "id": "DE502006000415 D1" },
-          { "id": "EP1712828 A2" },
-          { "id": "EP1712828 A3" },
-          { "id": "EP1712828 B1" },
-          { "id": "ATE388370 T1" },
-          { "id": "AU2006201355 A1" },
-          { "id": "AU2006201355 B2" },
-          { "id": "JP2006301621 A" },
-          { "id": "US2006/0258495 A1" },
-          { "id": "US7562851 B2" }
+          {
+            "id": "DE102005017487 A1",
+            "active": false
+          },
+          {
+            "id": "DE502006000415 D1",
+            "active": false
+          },
+          {
+            "id": "EP1712828 A2",
+            "active": false
+          },
+          {
+            "id": "EP1712828 A3",
+            "active": false
+          },
+          {
+            "id": "EP1712828 B1",
+            "active": false
+          },
+          {
+            "id": "ATE388370 T1",
+            "active": false
+          },
+          {
+            "id": "AU2006201355 A1",
+            "active": false
+          },
+          {
+            "id": "AU2006201355 B2",
+            "active": false
+          },
+          {
+            "id": "JP2006301621 A",
+            "active": false
+          },
+          {
+            "id": "US2006/0258495 A1",
+            "active": false
+          },
+          {
+            "id": "US7562851 B2",
+            "active": false
+          }
         ]
       },
       {
         "title": "Kamerastabilisierungs- und Kamera-Trägervorrichtung",
+        "note": "",
         "patents": [
-          { "id": "DE102015107483 A1" },
-          { "id": "DE102015107483 B4", "active": true },
-          { "id": "EP3101327 A1" },
-          { "id": "EP3101327 B1", "active": true }
+          {
+            "id": "DE102015107483 A1",
+            "active": false
+          },
+          {
+            "id": "DE102015107483 B4",
+            "active": true
+          },
+          {
+            "id": "EP3101327 A1",
+            "active": false
+          },
+          {
+            "id": "EP3101327 B1",
+            "active": true
+          }
         ]
       }
     ]
-  }
+  },
+  "lang": "de"
 }
