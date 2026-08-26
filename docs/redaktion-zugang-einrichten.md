@@ -53,18 +53,47 @@ klickt **Sign In Using Access Token**, fügt ihn ein — fertig.
 ## E-Mail bei fehlgeschlagener Veroeffentlichung
 
 Ohne das merkt niemand, wenn Aenderungen liegenbleiben. GitHub kann das von
-sich aus, ganz ohne Zusatzdienst:
+sich aus, ganz ohne Zusatzdienst. Es braucht zwei Durchgaenge, weil die
+Benachrichtigung immer an ein GitHub-Konto haengt, nicht an eine beliebige
+Adresse.
+
+### A. An Curt (curt@cos-cam.com)
+
+GitHub verschickt den Fehlschlag an den **Ausloeser** des Laufs. Das ist bei
+Curts Speichervorgaengen das Redaktionskonto `cos-cam`. Also dort Curts
+Adresse hinterlegen:
+
+1. Als **`cos-cam`** anmelden (das Redaktionskonto, nicht dein eigenes).
+2. https://github.com/settings/emails → **Add email address** →
+   `curt@cos-cam.com` → GitHub schickt einen Bestaetigungslink dorthin,
+   den Curt anklicken muss.
+3. https://github.com/settings/notifications → unter **Default notification
+   email** `curt@cos-cam.com` auswaehlen.
+4. Auf derselben Seite unter **Actions**: **Email** anhaken und
+   **"Send notifications for failed workflows only"** waehlen.
+
+Damit bekommt Curt die Mail direkt, ohne Umweg ueber dich.
+
+### B. An dich
 
 1. Mit **deinem eigenen** Konto anmelden.
-2. https://github.com/settings/notifications
-3. Unter **Actions** die Zustellung per E-Mail anhaken und
-   **"Send notifications for failed workflows only"** waehlen.
-4. Sicherstellen, dass du das Repo beobachtest: auf
+2. https://github.com/settings/notifications → unter **Actions**
+   **Email** anhaken und **"Send notifications for failed workflows only"**.
+3. Repo beobachten: auf
    https://github.com/leonmoralic/curt-schaller-website oben rechts
    **Watch → All Activity** (oder mindestens **Custom → Actions**).
+   Schritt 3 ist noetig, weil du bei Curts Speichervorgaengen nicht der
+   Ausloeser bist — ohne Watch bekommst du nichts.
 
-Damit bekommst du eine Mail, sobald ein Deploy scheitert. Im Editor sieht
-Curt parallel dazu eine rote Leiste.
+Im Editor sieht Curt parallel dazu eine rote Leiste.
+
+### Falls das nicht reicht
+
+Beide Wege haengen an GitHubs Benachrichtigungseinstellungen. Wer das
+unabhaengig davon will, laesst den Deploy die Mail selbst verschicken — ein
+zusaetzlicher Schritt in `.github/workflows/`, der bei Fehlschlag ueber SMTP
+an beide Adressen schreibt. Das braucht Zugangsdaten eines Postfachs als
+GitHub-Secrets; sag Bescheid, dann wird es eingebaut.
 
 ## Wenn es einmal mehr Redakteure werden
 
