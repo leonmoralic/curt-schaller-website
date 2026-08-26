@@ -23,6 +23,6 @@ lang: de
 
 **Curt O. Schaller** ist Erfinder der Kamera-Stabilisierungs-Systeme TRINITY und ARTEMIS sowie strategischer Berater und Entwickler für Produktstrategie und technische Ökosysteme.
 Von der Entwicklung über Produktion bis Vertrieb und Marketing. 
-2025 wurde er mit dem Academy Scientific and Engineering Award (Oscar), 2026 mit dem Engineering, Science & Technology Emmy Award ausgezeichnet.
+2025 wurde er mit dem Academy Scientific and Engineering Award (Oscar) ausgezeichnet.
 
 <!-- SOURCE: Curt's Vita-Text, 2026-05-11; Foltyn Co-Recipient bestätigt -->
