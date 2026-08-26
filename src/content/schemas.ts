@@ -3,23 +3,33 @@
 // triggering Astro's `astro:content` virtual module.
 import { z } from 'astro/zod';
 
-// Optional: der Sprachcode steckt bereits im Dateinamen (de.md / en.md) und
-// wird von keinem Bauteil gelesen. Optional, damit der Build nicht bricht,
-// wenn der Redaktions-Editor das Feld beim Speichern nicht mitschreibt.
-const langPrefix = z.enum(['de', 'en']).optional();
+// Der Redaktionseditor schreibt fuer leer gelassene Felder `null` oder einen
+// leeren Text — nicht "gar nicht vorhanden". Zods `.optional()` akzeptiert
+// aber nur `undefined`. Ohne diese Helfer bricht der Build, sobald jemand ein
+// optionales Feld leer laesst, und zwar fuer die GESAMTE Website: es wird dann
+// nichts mehr ausgeliefert, ohne dass die Redaktion davon etwas merkt.
+const optText = () => z.string().nullish().transform((v) => v ?? undefined);
+const optZahl = () => z.number().nullish().transform((v) => v ?? undefined);
+const optFlag = () => z.boolean().nullish().transform((v) => v ?? false);
+const liste = <T extends z.ZodTypeAny>(schema: T) =>
+  z.array(schema).nullish().transform((v) => v ?? []);
+
+// Der Sprachcode steckt bereits im Dateinamen (de.md / en.md) und wird von
+// keinem Bauteil gelesen.
+const langPrefix = z.enum(['de', 'en']).nullish();
 
 export const heroSchema = z.object({
   lang: langPrefix,
   kicker: z.string(),
-  headlineLines: z.array(
-    z.object({ text: z.string(), emphasis: z.boolean().default(false) }),
+  headlineLines: liste(
+    z.object({ text: z.string(), emphasis: optFlag() }),
   ),
-  stats: z.array(
+  stats: liste(
     z.object({
       label: z.string(),
       value: z.string(),
-      count: z.number().optional(),
-      suffix: z.string().optional(),
+      count: optZahl(),
+      suffix: optText(),
     }),
   ),
   image: z.string(),
@@ -29,13 +39,16 @@ export const heroSchema = z.object({
 export const aboutSchema = z.object({
   lang: langPrefix,
   title: z.string(),
-  timeline: z.array(
+  timeline: liste(
     z.object({
       year: z.string(),
-      yearSuffix: z.string().optional(),
-      title: z.string(),
-      body: z.string(),
-      current: z.boolean().default(false),
+      yearSuffix: optText(),
+      // Titel und Text duerfen fehlen: eine Station, die in einer Sprache noch
+      // nicht uebersetzt ist, soll den Build nicht anhalten. Sie wird beim
+      // Rendern uebersprungen, bis sie gefuellt ist.
+      title: optText(),
+      body: optText(),
+      current: optFlag(),
     }),
   ),
 });
@@ -43,39 +56,39 @@ export const aboutSchema = z.object({
 export const inventionsSchema = z.object({
   lang: langPrefix,
   title: z.string(),
-  entries: z.array(
+  entries: liste(
     z.object({
       name: z.string(),
       year: z.number(),
       principle: z.string(),
-      patents: z.array(z.string()).default([]),
-      award: z.string().optional(),
+      patents: liste(z.string()),
+      award: optText(),
     }),
   ),
   patentBlock: z
     .object({
       heading: z.string(),
       intro: z.string(),
-      families: z.array(
+      families: liste(
         z.object({
           title: z.string(),
-          note: z.string().optional(),
-          patents: z.array(
+          note: optText(),
+          patents: liste(
             z.object({
               id: z.string(),
-              active: z.boolean().default(false),
+              active: optFlag(),
             }),
           ),
         }),
       ),
     })
-    .optional(),
+    .nullish(),
 });
 
 export const practiceSchema = z.object({
   lang: langPrefix,
   title: z.string(),
-  entries: z.array(
+  entries: liste(
     z.object({
       titleItalic: z.string(),
       titleRest: z.string(),
@@ -95,9 +108,7 @@ export const contactSchema = z.object({
   email: z.string().email(),
   buttonLabel: z.string(),
   location: z.string(),
-  links: z
-    .array(z.object({ label: z.string(), href: z.string().url() }))
-    .default([]),
+  links: liste(z.object({ label: z.string(), href: z.string().url() })),
 });
 
 // Gestaltung. Bewusst NICHT zweisprachig: die Schriftwahl gilt fuer die

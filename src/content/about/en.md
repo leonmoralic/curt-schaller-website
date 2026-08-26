@@ -19,7 +19,7 @@ timeline:
   - year: '2001'
     yearSuffix: ''
     title: <em>artemis</em> · Sachtler / Vitec
-    body: "Market launch at NAB Show, Las Vegas — the world's first modular camera stabilization system. artemis-HD: first Full-HD system."
+    body: 'Market launch at NAB Show, Las Vegas — the world''s first modular camera stabilization system. artemis-HD: first Full-HD system.'
     current: false
   - year: '2015'
     yearSuffix: ''
@@ -33,25 +33,28 @@ timeline:
     current: false
   - year: '2016'
     yearSuffix: ''
+    title: CINEC Award 2016 · Munich
+    body: Awarded for the development of the TRINITY system.
+    current: false
+  - year: '2017'
+    yearSuffix: ''
     title: BIRTV Award · Beijing
     body: Honoured for the development of the TRINITY system.
     current: false
-  - year: '2017'
+  - year: '2022'
     yearSuffix: ''
     title: <em>TRINITY 2</em>
     body: Launch of the next-generation system at ARRI. Reduced weight, expanded stabilization modes, refined operating logic.
     current: false
-  - year: '2022'
+  - year: '2025'
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
     current: false
-  - year: '2025'
-    yearSuffix: ''
+  - year: '2026'
     title: <em>Emmy Award - Engineering, Science & Technology</em>
     body: Awarded for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in life- and TV-productions worldwide.
     current: true
-  - year: '2026'
 lang: en
 ---
 

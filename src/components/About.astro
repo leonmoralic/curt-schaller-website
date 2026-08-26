@@ -8,7 +8,10 @@ const { lang } = Astro.props;
 const about = await getEntry('about', lang);
 if (!about) throw new Error(`Missing about content for ${lang}`);
 const { Content } = await about.render();
-const { title, timeline } = about.data;
+const { title } = about.data;
+// Stationen ohne Titel und ohne Text sind in dieser Sprache noch nicht
+// uebersetzt — sie werden ausgelassen, nicht leer dargestellt.
+const timeline = about.data.timeline.filter((t) => t.title || t.body);
 ---
 <Section id="about" num="01" label="Vita" title={title}>
   <div class="about__body reveal"><Content /></div>

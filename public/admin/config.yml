@@ -1,7 +1,7 @@
 # Sveltia CMS — Redaktionsoberflaeche fuer cos-cam.com
 #
 # Jede Datei unter src/content/ existiert zweimal: de + en. Der Editor zeigt
-# beide Sprachen nebeneinander. Felder mit "i18n: duplicate" werden nur einmal
+# beide Sprachen nebeneinander. Felder mit "i18n: true" werden nur einmal
 # gepflegt und in beide Sprachdateien geschrieben (Jahreszahlen, Patentnummern,
 # E-Mail, Bilder) — so koennen DE und EN dort nicht auseinanderlaufen.
 
@@ -41,16 +41,16 @@ collections:
             i18n: true
             fields:
               - { name: text, label: Text, widget: string, i18n: true }
-              - { name: emphasis, label: Kursiv darstellen, widget: boolean, default: false, required: false, i18n: duplicate }
+              - { name: emphasis, label: Kursiv darstellen, widget: boolean, default: false, required: false, i18n: true }
           - name: stats
             label: Kennzahlen rechts unten
             widget: list
             i18n: true
             fields:
               - { name: label, label: Beschriftung, widget: string, i18n: true }
-              - { name: value, label: 'Wert (z. B. "40+" oder "2025")', widget: string, i18n: duplicate }
-              - { name: count, label: Zahl zum Hochzaehlen (optional), widget: number, value_type: int, required: false, i18n: duplicate }
-              - { name: suffix, label: 'Zeichen hinter der Zahl (optional, z. B. "+")', widget: string, required: false, i18n: duplicate }
+              - { name: value, label: 'Wert (z. B. "40+" oder "2025")', widget: string, i18n: true }
+              - { name: count, label: Zahl zum Hochzaehlen (optional), widget: number, value_type: int, required: false, i18n: true }
+              - { name: suffix, label: 'Zeichen hinter der Zahl (optional, z. B. "+")', widget: string, required: false, i18n: true }
           - { name: image, label: Foto von Curt, widget: image, i18n: duplicate, hint: "Achtung, das OSCARS-Lettering ist Teil dieses Bildes. Ein neues Foto ohne Lettering laesst den Schriftzug verschwinden." }
           - { name: imageAlt, label: Bildbeschreibung (fuer Screenreader), widget: string, i18n: true }
           - { name: body, label: Einleitungstext, widget: markdown, i18n: true }
@@ -72,11 +72,11 @@ collections:
             i18n: true
             summary: '{{fields.year}} — {{fields.title}}'
             fields:
-              - { name: year, label: Jahr, widget: string, i18n: duplicate }
+              - { name: year, label: Jahr, widget: string, i18n: true }
               - { name: yearSuffix, label: 'Zusatz hinter dem Jahr (optional, z. B. "s" fuer 1990s)', widget: string, required: false, i18n: true }
               - { name: title, label: Titel der Station, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
               - { name: body, label: Beschreibung, widget: text, i18n: true, hint: "HTML erlaubt (<em> kursiv, <span class=\"hl\"> hervorgehoben)." }
-              - { name: current, label: Letzte Station (Oscar-Statue erscheint hier), widget: boolean, default: false, required: false, i18n: duplicate }
+              - { name: current, label: Letzte Station (Oscar-Statue erscheint hier), widget: boolean, default: false, required: false, i18n: true }
           - { name: body, label: Fliesstext unter der Zeitleiste, widget: markdown, i18n: true }
 
   # --------------------------------------------------- Erfindungen und Patente
@@ -96,10 +96,10 @@ collections:
             i18n: true
             summary: '{{fields.year}} — {{fields.name}}'
             fields:
-              - { name: name, label: Name, widget: string, i18n: duplicate }
-              - { name: year, label: Jahr, widget: number, value_type: int, i18n: duplicate }
+              - { name: name, label: Name, widget: string, i18n: true }
+              - { name: year, label: Jahr, widget: number, value_type: int, i18n: true }
               - { name: principle, label: Beschreibung, widget: text, i18n: true }
-              - { name: patents, label: Zugehoerige Patentnummern (optional), widget: list, field: { name: id, label: Nummer, widget: string }, required: false, i18n: duplicate }
+              - { name: patents, label: Zugehoerige Patentnummern (optional), widget: list, field: { name: id, label: Nummer, widget: string }, required: false, i18n: true }
               - { name: award, label: Auszeichnung (optional), widget: string, required: false, i18n: true }
           - name: patentBlock
             label: Patent-Kapitel
@@ -120,7 +120,7 @@ collections:
                   - name: patents
                     label: Patente
                     widget: list
-                    i18n: duplicate
+                    i18n: true
                     summary: '{{fields.id}}'
                     fields:
                       - { name: id, label: Patentnummer, widget: string }
@@ -173,7 +173,7 @@ collections:
             i18n: true
             fields:
               - { name: label, label: Beschriftung, widget: string, i18n: true }
-              - { name: href, label: Adresse (vollstaendige URL), widget: string, i18n: duplicate }
+              - { name: href, label: Adresse (vollstaendige URL), widget: string, i18n: true }
 
   # ---------------------------------------------------------------- Gestaltung
   # Bewusst ohne i18n: die Schrift gilt fuer beide Sprachfassungen.
