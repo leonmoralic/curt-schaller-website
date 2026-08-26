@@ -1,28 +1,35 @@
 {
-  "lang": "de",
   "title": "Heute.",
   "entries": [
     {
-      "titleItalic": "Workshops",
-      "titleRest": "& Trainings",
-      "body": "Intensive Trainings für Operator und Crews. Vom ersten Set-Up bis zur eigenen Handschrift in Bewegung.",
-      "tag": "München · DACH",
-      "mailSubject": "Anfrage: Workshop"
+      "titleItalic": "Strategy & Advisory",
+      "titleRest": "Full-Cycle-Management",
+      "body": "Vierzig Jahre zwischen Erfindung und Markt. Von der Entwicklung über die Produktion bis zum Vertrieb und Marketing. Diese Full-Cycle-Erfahrung für Produktstrategie, technische Ökosysteme und deren Vermarktung nutzbar machen.",
+      "tag": "München · weltweit",
+      "mailSubject": "Anfrage: Strategy & Advisory"
     },
     {
       "titleItalic": "R&D",
       "titleRest": "Consulting",
-      "body": "Engineering-Beratung für Hersteller, Studios und Forschungs-Setups — mechanisch, sensorisch, mechatronisch.",
-      "tag": "NDA · Worldwide",
+      "body": "Engineering-Beratung für Film- und TV-Produktionen, Hersteller und Forschung. Mechanisch, sensorisch, mechatronisch.",
+      "tag": "München · weltweit",
       "mailSubject": "Anfrage: R&D Consulting"
+    },
+    {
+      "titleItalic": "Workshops",
+      "titleRest": "& Trainings",
+      "body": "Intensive Trainings für Operator und Crews. Vom ersten Set-Up bis zur eigenen Handschrift in der Bildgestaltung mit bewegter Kamera.",
+      "tag": "München · weltweit",
+      "mailSubject": "Anfrage: Workshop"
     },
     {
       "titleItalic": "Talks",
       "titleRest": "& Lectures",
-      "body": "Vorträge zu Erfindung, Filmhandwerk und der Verbindung von Mensch und Maschine — Festivals und Filmschulen.",
-      "tag": "Keynotes",
+      "body": "Vorträge zu Erfindung, Filmhandwerk und der Verbindung von Menschen und Maschine. Festivals und Filmschulen.",
+      "tag": "München · weltweit",
       "mailSubject": "Anfrage: Vortrag"
     }
   ],
-  "email": "curt@cos-cam.com"
+  "email": "curt@cos-cam.com",
+  "lang": "de"
 }

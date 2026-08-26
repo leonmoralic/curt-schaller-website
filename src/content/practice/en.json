@@ -1,7 +1,13 @@
 {
-  "lang": "en",
   "title": "Today.",
   "entries": [
+    {
+      "titleItalic": "Strategy & Advisory",
+      "titleRest": "- Full Cycle Management",
+      "body": "Forty years between invention and market. From development through production to sales and marketing. Bringing this full-cycle experience to product strategy, technical ecosystems, and their go-to-market.",
+      "tag": "Munich · worldwide",
+      "mailSubject": "Inquiry: Strategy & Advisory"
+    },
     {
       "titleItalic": "Workshops",
       "titleRest": "& Trainings",
@@ -24,5 +30,6 @@
       "mailSubject": "Inquiry: Talk"
     }
   ],
-  "email": "curt@cos-cam.com"
+  "email": "curt@cos-cam.com",
+  "lang": "en"
 }
