@@ -75,12 +75,6 @@ timeline:
     body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
     current: false
     awardIcon: oscar
-  - year: '2026'
-    yearSuffix: ''
-    title: <em>Emmy Award - Engineering, Science & Technology</em>
-    body: Awarded for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in life- and TV-productions worldwide.
-    current: true
-    awardIcon: emmy
 lang: en
 ---
 
