@@ -3,61 +3,78 @@ title: Vom Bavaria-Studio <em>zum Oscar.</em>
 timeline:
   - year: '1984'
     yearSuffix: ''
-    title: Ausbildung Bavaria-Film
+    title: Ausbildung · Bavaria-Film-Studios · München
     body: Kameraassistent, später Kameramann in den Bavaria-Film- und Fernsehstudios.
     current: false
+    awardIcon: ''
   - year: '1990'
     yearSuffix: s
     title: Auslandsdokumentationen &amp; Serie
     body: Studiokameramann, dann Spezialisierung auf Doku im Ausland. Ab Mitte der 90er Kameramann und Steadicam Operator in Serien, Filmen, Shows und Dokus.
     current: false
+    awardIcon: ''
   - year: '1998'
     yearSuffix: ''
     title: Dozent · weltweit
-    body: Beginn der Lehrtätigkeit in der Ausbildung von Steadicam Operatoren — später u.a. Sachtler Academy, ARRI Academy, Münchner Filmwerkstatt, Gerassimow-Institut Moskau.
+    body: Beginn der Lehrtätigkeit in der Ausbildung von Steadicam Operatoren — später u.a. Sachtler Academy, ARRI Academy, Münchner Filmwerkstatt, Gerassimow-Institut Moskau. Anerkanntes Trainingskonzept durch den BVK seit 2006.
     current: false
+    awardIcon: ''
   - year: '2001'
     yearSuffix: ''
     title: <em>artemis</em> · Sachtler / Vitec
-    body: 'Markteinführung auf der NAB Show, Las Vegas — das weltweit erste modular aufgebaute Kamerastabilisierungssystem. artemis-HD: erstes Full-HD-System.'
+    body: |-
+      Markteinführung des ARTEMIS Cine HD Systems auf der NAB Show, Las Vegas.
+      Das weltweit erste modular aufgebaute Full-HD-System Kamera-Stabilisierungs-System.
     current: false
+    awardIcon: ''
   - year: '2015'
     yearSuffix: ''
     title: <em>TRINITY</em>
-    body: Erstes Kamera-Stabilisierungs-System, das mechanische und elektronische Stabilisierung in einem Rig verbindet — ab Ende 2014 entwickelt mit Unterstützung von <span class="hl">Dr. Roman Foltyn</span>.
+    body: Erstes hybrides Kamera-Stabilisierungs-System, das mechanische und elektronische Stabilisierung in einem Rig verbindet. Entwickelt bei Sachtler mit der Unterstützung von Dr. Roman Foltyn.
     current: false
+    awardIcon: ''
   - year: '2016'
     yearSuffix: ''
     title: Wechsel zu <em>ARRI</em>
-    body: Produktmanager für Kamerastabilisierungssysteme. Im selben Jahr <span class="hl">Cine Gear Technical Award</span> &amp; <span class="hl">cinecAward</span> für TRINITY.
+    body: Entwicklung, Produktionsmanagement sowie die Full-Cycle-Produktverantwortung. Aufbau von Direkt- und Onlinevertrieb, weltweites Händler- und Distributorennetzwerk. Gestaltung von Marketingkampagnen und Promotionvideos, Planung und Umsetzung von Messeauftritten.
     current: false
+    awardIcon: ''
   - year: '2016'
     yearSuffix: ''
-    title: CINEC Award 2016 · Munich
+    title: Cine Gear Award 2016 · Los Angeles
     body: Auszeichnung für die Entwicklung des TRINITY-Systems.
     current: false
+    awardIcon: ''
+  - year: '2016'
+    yearSuffix: ''
+    title: CINEC Award 2016 · München
+    body: Auszeichnung für die Entwicklung des TRINITY-Systems.
+    current: false
+    awardIcon: ''
   - year: '2017'
     yearSuffix: ''
     title: BIRTV Award · Peking
     body: Auszeichnung für die Entwicklung des TRINITY-Systems.
     current: false
+    awardIcon: ''
   - year: '2022'
     yearSuffix: ''
     title: <em>TRINITY 2</em>
-    body: Markteinführung der Nachfolger-Generation bei ARRI. Reduziertes Gewicht, erweiterte Stabilisierungs-Modi, überarbeitete Bedienlogik.
+    body: Markteinführung der Nachfolger-Generation des TRINITY‑Kamera-Stabilisierungs-Systems bei ARRI. Reduziertes Gewicht, erweiterte Stabilisierungs-Modi, überarbeitete Bedienlogik, voll digitales Gesamtkonzept mit neuem Ecosystem.
     current: false
+    awardIcon: ''
   - year: '2025'
-    awardIcon: oscar
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Gemeinsam mit <span class="hl">Dr. Roman Foltyn</span> ausgezeichnet für Konzept, Design und Entwicklung des <em>TRINITY</em> — eine der höchsten Ehrungen für Filmtechnik weltweit.
     current: false
+    awardIcon: oscar
   - year: '2026'
-    awardIcon: emmy
     yearSuffix: ''
     title: <em>Emmy Award - Engineering, Science & Technology</em>
     body: Ausgezeichnet für Konzept, Design und Entwicklung des <em>TRINITY 2</em> — eine der höchsten Ehrungen für den Einsatz bei Live- und TV-Produktionen weltweit.
     current: true
+    awardIcon: emmy
 lang: de
 ---
 
