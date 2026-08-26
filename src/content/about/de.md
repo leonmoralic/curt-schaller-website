@@ -27,6 +27,12 @@ timeline:
       Das weltweit erste modular aufgebaute Full-HD-System Kamera-Stabilisierungs-System.
     current: false
     awardIcon: ''
+  - year: '2012'
+    yearSuffix: ''
+    title: <em>Idee für TRINITY</em>
+    body: Konzept für ein modulares, hybrides Kamera-Stabilisierungs-System; erste Umsetzungsschritte auf Basis von artemis.
+    current: false
+    awardIcon: ''
   - year: '2015'
     yearSuffix: ''
     title: <em>TRINITY</em>
