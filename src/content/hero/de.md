@@ -16,10 +16,6 @@ stats:
     value: '2025'
     count: null
     suffix: ''
-  - label: Emmy Award
-    value: '2026'
-    count: null
-    suffix: ''
 image: /images/curt-master.png
 imageAlt: Curt O. Schaller mit dem Academy Scientific and Engineering Award 2025
 lang: de
