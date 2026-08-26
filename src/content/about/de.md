@@ -47,11 +47,13 @@ timeline:
     body: Markteinführung der Nachfolger-Generation bei ARRI. Reduziertes Gewicht, erweiterte Stabilisierungs-Modi, überarbeitete Bedienlogik.
     current: false
   - year: '2025'
+    awardIcon: oscar
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Gemeinsam mit <span class="hl">Dr. Roman Foltyn</span> ausgezeichnet für Konzept, Design und Entwicklung des <em>TRINITY</em> — eine der höchsten Ehrungen für Filmtechnik weltweit.
     current: false
   - year: '2026'
+    awardIcon: emmy
     yearSuffix: ''
     title: <em>Emmy Award - Engineering, Science & Technology</em>
     body: Ausgezeichnet für Konzept, Design und Entwicklung des <em>TRINITY 2</em> — eine der höchsten Ehrungen für den Einsatz bei Live- und TV-Produktionen weltweit.

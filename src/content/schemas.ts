@@ -49,6 +49,10 @@ export const aboutSchema = z.object({
       title: optText(),
       body: optText(),
       current: optFlag(),
+      // Welche Auszeichnung an dieser Station erscheint. Frueher haing die
+      // Oscar-Statue am `current`-Schalter — dadurch wanderte sie mit, sobald
+      // eine neuere Station dazukam.
+      awardIcon: z.enum(['oscar', 'emmy']).nullish(),
     }),
   ),
 });

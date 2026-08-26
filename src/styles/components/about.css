@@ -195,7 +195,7 @@ html.js .tl__row {
   100% { transform: translate(-50%, -50%) scale(1)   rotateY(360deg); opacity: 1; }
 }
 
-.tl__row--current.tl__row--passed .tl__oscar-wrap {
+.tl__row--passed .tl__oscar-wrap {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1) rotateY(360deg);
   animation: oscar-emerge 1.4s var(--ease-out);
@@ -203,7 +203,7 @@ html.js .tl__row {
 
 /* Fade the underlying dot slightly so the trophy reads as one element,
    not a circle stuck behind a statue. */
-.tl__row--current.tl__row--passed .tl__dot {
+.tl__row--passed:has(.tl__oscar-wrap) .tl__dot {
   opacity: 0.25;
   transform: translateX(-50%) scale(0.65);
   transition: opacity 0.4s var(--ease-out),
@@ -212,7 +212,7 @@ html.js .tl__row {
 
 @media (prefers-reduced-motion: reduce) {
   .tl__oscar-wrap { transition: opacity 0.2s linear; animation: none; }
-  .tl__row--current.tl__row--passed .tl__oscar-wrap {
+  .tl__row--passed .tl__oscar-wrap {
     transform: translate(-50%, -50%) scale(1) rotateY(0deg);
   }
 }

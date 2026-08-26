@@ -114,7 +114,7 @@
       'padding:10px 16px;border:1px solid rgba(0,0,0,.25);border-radius:6px;' +
       'background:#1c1c1e;color:#fff;font:500 13px/1 system-ui,sans-serif;cursor:pointer}' +
     '#web-vorschau-knopf:hover{background:#000}' +
-    '#web-vorschau{position:fixed;top:0;right:0;width:46vw;min-width:360px;height:100vh;' +
+    '#web-vorschau{position:fixed;top:var(--wv-oben,0px);right:0;width:46vw;min-width:360px;height:calc(100vh - var(--wv-oben,0px));' +
       'z-index:2147482999;display:none;flex-direction:column;background:#fff;' +
       'border-left:1px solid rgba(0,0,0,.18);box-shadow:-8px 0 24px rgba(0,0,0,.12)}' +
     '#web-vorschau.is-offen{display:flex}' +

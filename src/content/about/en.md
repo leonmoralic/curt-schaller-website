@@ -47,11 +47,13 @@ timeline:
     body: Launch of the next-generation system at ARRI. Reduced weight, expanded stabilization modes, refined operating logic.
     current: false
   - year: '2025'
+    awardIcon: oscar
     yearSuffix: ''
     title: <em>Academy Scientific &amp; Engineering Award</em>
     body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
     current: false
   - year: '2026'
+    awardIcon: emmy
     title: <em>Emmy Award - Engineering, Science & Technology</em>
     body: Awarded for the concept, design, and development of <em>TRINITY 2</em> — one of the highest honours in life- and TV-productions worldwide.
     current: true

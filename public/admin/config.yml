@@ -76,7 +76,23 @@ collections:
               - { name: yearSuffix, label: 'Zusatz hinter dem Jahr (optional, z. B. "s" fuer 1990s)', widget: string, required: false, i18n: true }
               - { name: title, label: Titel der Station, widget: string, i18n: true, hint: "HTML erlaubt (<em> fuer kursiv)." }
               - { name: body, label: Beschreibung, widget: text, i18n: true, hint: "HTML erlaubt (<em> kursiv, <span class=\"hl\"> hervorgehoben)." }
-              - { name: current, label: Letzte Station (Oscar-Statue erscheint hier), widget: boolean, default: false, required: false, i18n: true }
+              - { name: current, label: Letzte Station, widget: boolean, default: false, required: false, i18n: true }
+              - name: awardIcon
+                label: Auszeichnung an dieser Station
+                widget: select
+                required: false
+                i18n: true
+                hint: >-
+                  Laesst an dieser Station die Statue erscheinen, sobald der
+                  Besucher dorthin scrollt. Nur bei den Stationen setzen, an
+                  denen die Auszeichnung wirklich verliehen wurde.
+                options:
+                  - label: keine
+                    value: ''
+                  - label: Oscar (Academy Award)
+                    value: oscar
+                  - label: Emmy Award
+                    value: emmy
           - { name: body, label: Fliesstext unter der Zeitleiste, widget: markdown, i18n: true }
 
   # --------------------------------------------------- Erfindungen und Patente

@@ -50,6 +50,22 @@ abgestufter Token liefert stumm einen 404.
 Schlüssel plus `docs/redaktion-anleitung.md`. Er ruft cos-cam.com/admin auf,
 klickt **Sign In Using Access Token**, fügt ihn ein — fertig.
 
+## E-Mail bei fehlgeschlagener Veroeffentlichung
+
+Ohne das merkt niemand, wenn Aenderungen liegenbleiben. GitHub kann das von
+sich aus, ganz ohne Zusatzdienst:
+
+1. Mit **deinem eigenen** Konto anmelden.
+2. https://github.com/settings/notifications
+3. Unter **Actions** die Zustellung per E-Mail anhaken und
+   **"Send notifications for failed workflows only"** waehlen.
+4. Sicherstellen, dass du das Repo beobachtest: auf
+   https://github.com/leonmoralic/curt-schaller-website oben rechts
+   **Watch → All Activity** (oder mindestens **Custom → Actions**).
+
+Damit bekommst du eine Mail, sobald ein Deploy scheitert. Im Editor sieht
+Curt parallel dazu eine rote Leiste.
+
 ## Wenn es einmal mehr Redakteure werden
 
 Dann Repo in eine GitHub-Organisation überführen (kostenlos). Dort funktionieren

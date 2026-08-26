@@ -37,6 +37,21 @@ einfügen. Wenn du ihn nicht mehr findest, hat Leon ihn.
    Falls nicht sofort: Seite mit Cmd+Umschalt+R (Windows: Strg+Umschalt+R)
    neu laden, der Browser hält die alte Fassung manchmal fest.
 
+## Wenn oben eine Leiste erscheint
+
+Nach dem Speichern baut die Website sich neu auf. Oben im Editor siehst du
+dazu eine Leiste:
+
+- **Grau** — die Website wird gerade neu erstellt, etwa zwei Minuten.
+- **Grün** — fertig, deine Änderung ist auf cos-cam.com zu sehen.
+- **Rot** — die Veröffentlichung ist fehlgeschlagen. Deine Arbeit ist
+  gespeichert und nicht verloren, sie ist aber **nicht** auf der Website.
+  Bitte gib in diesem Fall Leon Bescheid und arbeite nicht weiter, bis er
+  sich gemeldet hat.
+
+Die rote Leiste ist wichtig: Ohne sie merkt man nicht, dass Änderungen
+liegenbleiben.
+
 ## Die Website danebenlegen
 
 Unten rechts sitzt der Knopf **Website ansehen**. Er blendet die echte
@@ -57,6 +72,13 @@ nebeneinander — du füllst links Deutsch aus, rechts Englisch.
 Manche Felder gibt es nur einmal, weil sie in beiden Sprachen gleich sein
 müssen: Jahreszahlen, Patentnummern, die E-Mail-Adresse und das Foto. Diese
 änderst du einmal, und beide Sprachfassungen übernehmen den Wert.
+
+## Statue an einer Station
+
+Bei jeder Station der Zeitleiste kannst du unter **Auszeichnung an dieser
+Station** wählen, ob dort eine Statue erscheint — Oscar oder Emmy. Sie taucht
+auf, sobald ein Besucher bis dorthin scrollt. Setze sie nur bei den Stationen,
+an denen die Auszeichnung tatsächlich verliehen wurde.
 
 ## Schriftart der Website
 
