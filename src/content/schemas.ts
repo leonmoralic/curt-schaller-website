@@ -8,11 +8,25 @@ import { z } from 'astro/zod';
 // aber nur `undefined`. Ohne diese Helfer bricht der Build, sobald jemand ein
 // optionales Feld leer laesst, und zwar fuer die GESAMTE Website: es wird dann
 // nichts mehr ausgeliefert, ohne dass die Redaktion davon etwas merkt.
-const optText = () => z.string().nullish().transform((v) => v ?? undefined);
-const optZahl = () => z.number().nullish().transform((v) => v ?? undefined);
-const optFlag = () => z.boolean().nullish().transform((v) => v ?? false);
+const optText = () =>
+  z.preprocess(
+    (v) => (typeof v === 'string' && v !== '' ? v : undefined),
+    z.string().optional(),
+  );
+const optZahl = () =>
+  z.preprocess(
+    (v) => (typeof v === 'number' && Number.isFinite(v) ? v : undefined),
+    z.number().optional(),
+  );
+const optFlag = () =>
+  z.preprocess((v) => v === true, z.boolean());
 const liste = <T extends z.ZodTypeAny>(schema: T) =>
-  z.array(schema).nullish().transform((v) => v ?? []);
+  z.preprocess((v) => (Array.isArray(v) ? v : []), z.array(schema));
+// Auswahlfelder: der Editor schreibt fuer "keine Auswahl" einen leeren Text.
+// Alles, was nicht auf der Liste steht, gilt als nicht gesetzt — ein
+// unerwarteter Wert darf die Website niemals offline nehmen.
+const optAuswahl = <T extends string>(werte: readonly T[]) =>
+  z.any().transform((v) => (werte.includes(v) ? (v as T) : undefined));
 
 // Der Sprachcode steckt bereits im Dateinamen (de.md / en.md) und wird von
 // keinem Bauteil gelesen.
@@ -52,7 +66,7 @@ export const aboutSchema = z.object({
       // Welche Auszeichnung an dieser Station erscheint. Frueher haing die
       // Oscar-Statue am `current`-Schalter — dadurch wanderte sie mit, sobald
       // eine neuere Station dazukam.
-      awardIcon: z.enum(['oscar', 'emmy']).nullish(),
+      awardIcon: optAuswahl(['oscar', 'emmy'] as const),
     }),
   ),
 });
@@ -69,7 +83,10 @@ export const inventionsSchema = z.object({
       award: optText(),
     }),
   ),
-  patentBlock: z
+  // Auch ein ganzer optionaler Block darf leer sein, ohne den Build zu stoppen.
+  patentBlock: z.preprocess(
+    (v) => (v && typeof v === 'object' ? v : undefined),
+    z
     .object({
       heading: z.string(),
       intro: z.string(),
@@ -86,7 +103,8 @@ export const inventionsSchema = z.object({
         }),
       ),
     })
-    .nullish(),
+    .optional(),
+  ),
 });
 
 export const practiceSchema = z.object({
@@ -118,5 +136,5 @@ export const contactSchema = z.object({
 // Gestaltung. Bewusst NICHT zweisprachig: die Schriftwahl gilt fuer die
 // ganze Website, nicht je Sprachfassung.
 export const designSchema = z.object({
-  fontPairing: z.enum(['fraunces', 'inter-tight']).default('fraunces'),
+  fontPairing: z.any().transform((v) => (v === 'inter-tight' ? v : 'fraunces')),
 });
