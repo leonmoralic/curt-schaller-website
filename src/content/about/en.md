@@ -71,10 +71,16 @@ timeline:
     awardIcon: ''
   - year: '2025'
     yearSuffix: ''
-    title: <em>Academy Scientific &amp; Engineering Award</em>
-    body: Awarded together with <span class="hl">Dr. Roman Foltyn</span> for the concept, design, and development of <em>TRINITY</em> — one of the highest honours in film technology worldwide.
+    title: <em>Oscar</em> Academy of Motion Picture Arts and Sciences (AMPAS)
+    body: Awarded the Academy Scientific and Engineering Award from the Academy of Motion Picture Arts and Sciences (AMPAS) for the concept, design, and development of the TRINITY camera stabilizer system at a ceremony held at the Academy Museum of Motion Pictures in Los Angeles (USA) in April 2025.
     current: false
     awardIcon: oscar
+  - year: '2026'
+    yearSuffix: ''
+    title: <em>Emmy</em> Academy of Television Arts & Sciences (ATAS)
+    body: Honored by the Academy of Television Arts & Sciences (ATAS) for the development of the TRINITY 2 camera stabilization system with the Engineering, Science & Technology Emmy Award, which will be presented on October 14, 2026, at the awards ceremony at the Saban Media Center of the Television Academy in Hollywood.
+    current: false
+    awardIcon: emmy
 lang: en
 ---
 

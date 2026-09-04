@@ -71,13 +71,20 @@ timeline:
     awardIcon: ''
   - year: '2025'
     yearSuffix: ''
-    title: <em>Academy Scientific &amp; Engineering Award</em>
-    body: Gemeinsam mit <span class="hl">Dr. Roman Foltyn</span> ausgezeichnet für Konzept, Design und Entwicklung des <em>TRINITY</em> — eine der höchsten Ehrungen für Filmtechnik weltweit.
+    title: <em>Oscar</em> Academy of Motion Picture Arts and Sciences (AMPAS)
+    body: Auszeichnung mit dem  <em>Academy Scientific and Engineering Award</em> der Academy of Motion Picture Arts and Sciences (AMPAS) für das Konzept, das Design und die Entwicklung des TRINITY-Kamera-Stabilisierungs-Systems bei der Zeremonie im Academy Museum of Motion Pictures in Los Angeles (USA) im  April 2025.
     current: false
     awardIcon: oscar
+  - year: '2026'
+    yearSuffix: ''
+    title: <em>Emmy</em> Academy of Television Arts & Sciences (ATAS)
+    body: Ausgezeichnet von der Academy of Television Arts & Sciences (ATAS) für die Entwicklung des Kamera-Stabilisierungs-Systems TRINITY 2 mit dem Engineering, Science & Technology Emmy Award, der am 14. Oktober 2026 bei der Preisverleihung im Saban Media Center der Television Academy in Hollywood übergeben wird.
+    current: false
+    awardIcon: emmy
 lang: de
 ---
 
-> Curt O. Schaller hat zwei Kamerastabilisierungssysteme entwickelt, die zum Weltstandard der Filmindustrie wurden — artemis (2001) und TRINITY (ab Ende 2014, weiterentwickelt zu TRINITY 2, 2022). 2025 wurde er dafür mit dem Academy Scientific and Engineering Award (Oscar) ausgezeichnet, 2026 mit dem Engineering, Science & Technology Emmy Award der Television Academy.Bevor er Systeme entwickelte, hat er sie selbst am Set gebraucht: Ausbildung 1984 in den Bavaria-Filmstudios, danach Jahre als Kameramann und Steadicam Operator bei Primetime-Formaten der öffentlich-rechtlichen Sender und bei internationalen Film- und TV-Produktionen. Diese Praxis ist bis heute die Basis seiner Entwicklungsarbeit — und seiner Beratung.Seit 1984 hat er fast alle Stationen durchlaufen: vom Operator über den Erfinder bis zum Produktmanager bei ARRI, der ein System zur Marktreife und globalen Verbreitung geführt hat. Diese Erfahrung bringt er heute als strategischer Berater bei international führenden Unternehmen im Bereich Camera-Support und Systemintegration ein — für Produktstrategie, technische Ökosysteme und deren Markteinführung.Daneben gibt er sein Wissen seit 1998 weltweit als Dozent weiter (u. a. Sachtler Academy, ARRI Academy, Münchner Filmwerkstatt) und hält Vorträge zu Erfindung, Filmhandwerk und der Verbindung von Mensch und Maschine.
+> Curt O. Schaller hat zwei Kamerastabilisierungssysteme entwickelt, die zum Weltstandard der Filmindustrie wurden — artemis (2001) und TRINITY (ab Ende 2014, weiterentwickelt zu TRINITY 2, 2022). 2025 wurde er dafür mit dem Academy Scientific and Engineering Award (Oscar) ausgezeichnet, 2026 mit dem Engineering, Science & Technology Emmy Award der Television Academy. 
+> Bevor er Systeme entwickelte, hat er sie selbst am Set gebraucht: Ausbildung 1984 in den Bavaria-Filmstudios, danach Jahre als Kameramann und Steadicam Operator bei Primetime-Formaten der öffentlich-rechtlichen Sender und bei internationalen Film- und TV-Produktionen. Diese Praxis ist bis heute die Basis seiner Entwicklungsarbeit — und seiner Beratung.Seit 1984 hat er fast alle Stationen durchlaufen: vom Operator über den Erfinder bis zum Produktmanager bei ARRI, der ein System zur Marktreife und globalen Verbreitung geführt hat. Diese Erfahrung bringt er heute als strategischer Berater bei international führenden Unternehmen im Bereich Camera-Support und Systemintegration ein — für Produktstrategie, technische Ökosysteme und deren Markteinführung.Daneben gibt er sein Wissen seit 1998 weltweit als Dozent weiter (u. a. Sachtler Academy, ARRI Academy, Münchner Filmwerkstatt) und hält Vorträge zu Erfindung, Filmhandwerk und der Verbindung von Mensch und Maschine.
 
 <!-- SOURCE: Vita-Text + Timeline-Stationen von Curt, 2026-05-11 -->
