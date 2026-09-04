@@ -47,19 +47,19 @@ timeline:
     awardIcon: ''
   - year: '2016'
     yearSuffix: ''
-    title: Cine Gear Award 2016 · Los Angeles
+    title: <em>Cine Gear Award</em> · Los Angeles
     body: Auszeichnung für die Entwicklung des TRINITY-Systems.
     current: false
     awardIcon: ''
   - year: '2016'
     yearSuffix: ''
-    title: CINEC Award 2016 · München
+    title: <em>CINEC Award </em> · München
     body: Auszeichnung für die Entwicklung des TRINITY-Systems.
     current: false
     awardIcon: ''
   - year: '2017'
     yearSuffix: ''
-    title: BIRTV Award · Peking
+    title: <em>BIRTV Award </em> · Peking
     body: Auszeichnung für die Entwicklung des TRINITY-Systems.
     current: false
     awardIcon: ''
