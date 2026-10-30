@@ -1,5 +1,5 @@
 ---
-kicker: Inventor · Advisor · Cinematographer
+kicker: Inventor · Designer · Cinematographer
 headlineLines:
   - text: The mind
     emphasis: false
@@ -8,12 +8,16 @@ headlineLines:
   - text: the motion.
     emphasis: false
 stats:
-  - label: Jahre im Fach
+  - label: Jahre in der Industrie
     value: 40+
     count: 40
     suffix: +
-  - label: Oscar · Sci-Tech
+  - label: Oscar · Academy of Motion Picture Arts and Sciences (AMPAS)
     value: '2025'
+    count: null
+    suffix: ''
+  - label: EMMY · Academy of Television Arts & Sciences (ATAS)
+    value: '2026'
     count: null
     suffix: ''
 image: /images/curt-master.png
