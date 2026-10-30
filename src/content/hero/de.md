@@ -21,7 +21,7 @@ stats:
     count: null
     suffix: ''
 image: /images/Oscar&EMMY.png
-imageAlt: Curt O. Schaller mit dem Academy Scientific and Engineering Award 2025
+imageAlt: Curt O. Schaller mit dem Oscar 2025 und dem Emmy 2026
 lang: de
 ---
 
